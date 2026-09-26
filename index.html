@@ -64,10 +64,10 @@
         }
 
         /* =========================================
-           HEADER - LIMPIO Y ORDENADO
+           HEADER - LIMPIO Y ORDENADO (LOGO CORREGIDO)
            ========================================= */
         header {
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -78,16 +78,19 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(8px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            height: 90px; /* Altura fija para evitar saltos */
+            height: 95px; /* Un poco más alto para acomodar el logo */
         }
 
         .logo-image {
-            height: 60px; /* Logo mucho más grande y legible */
+            height: 85px; /* Altura forzada mucho mayor */
+            max-width: 250px;
             width: auto;
             object-fit: contain;
+            /* Si tu imagen tiene mucho margen transparente a la izquierda, esto lo corrige visualmente: */
+            transform: scale(1.1);
+            transform-origin: left center;
         }
 
-        /* Botón del header: Fino y elegante, no compite con el Hero */
         .header-btn {
             text-decoration: none;
             color: var(--brand-teal);
@@ -112,7 +115,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 120px 5% 60px 5%; /* Espacio superior para el header fijo */
+            padding: 140px 5% 60px 5%;
             background-color: var(--bg-light);
         }
 
@@ -169,7 +172,7 @@
             display: inline-block;
             background-color: var(--brand-teal);
             color: #FFF;
-            padding: 16px 40px;
+            padding: 18px 42px; /* Botón ligeramente más grande */
             text-decoration: none;
             font-size: 1.05rem;
             font-weight: 500;
@@ -183,20 +186,37 @@
             box-shadow: 0 8px 20px rgba(26, 117, 133, 0.35);
             background-color: #145d6a;
         }
+        
+        /* INYECCIÓN DE CONFIANZA DEBAJO DEL BOTÓN */
+        .trust-badge {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            font-weight: 500;
+        }
+        
+        .stars { color: #F59E0B; font-size: 1rem; letter-spacing: 2px;}
 
         .hero-image-wrapper {
             flex: 1;
             display: flex;
             justify-content: flex-end;
+            position: relative;
         }
 
         .hero-image-wrapper img {
             width: 100%;
-            max-width: 600px; /* Controla que no se haga inmensa */
+            max-width: 600px;
             height: auto;
-            border-radius: 24px;
+            /* Radio asimétrico para un look premium y suave */
+            border-radius: 20px 20px 20px 100px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             object-fit: cover;
+            position: relative;
+            z-index: 2;
         }
 
         /* =========================================

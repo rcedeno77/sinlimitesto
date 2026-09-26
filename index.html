@@ -117,7 +117,7 @@
             display: flex;
             align-items: center;
             padding: 130px 5% 60px 5%;
-            background-color: var(--bg-white); /* Alternancia de color iniciada */
+            background-color: var(--bg-white); 
         }
 
         .hero-container {
@@ -207,10 +207,10 @@
         }
 
         /* =========================================
-           SECCIÓN 2: EMPATÍA (ESPACIOS REDUCIDOS)
+           SECCIÓN 2: EMPATÍA 
            ========================================= */
         .empathy {
-            padding: 80px 5%; /* Reducido de 120px para eliminar saltos */
+            padding: 80px 5%; 
             text-align: center;
             background-color: var(--brand-teal);
             position: relative;
@@ -249,8 +249,8 @@
            SECCIÓN 3: SERVICIOS 
            ========================================= */
         .services {
-            padding: 80px 5%; /* Reducido para cohesión */
-            background-color: var(--bg-light); /* Alternancia de color */
+            padding: 80px 5%; 
+            background-color: var(--bg-light); 
         }
 
         .section-title {
@@ -299,7 +299,7 @@
         }
 
         /* =========================================
-           SECCIÓN 4: SOBRE MÍ
+           SECCIÓN 4: SOBRE MÍ (AJUSTE DE RETRATO PREMIUM)
            ========================================= */
         .about {
             padding: 80px 5%;
@@ -314,18 +314,29 @@
             gap: 50px;
         }
 
-        .about-text { flex: 1; }
+        .about-text { 
+            flex: 1.2; 
+        }
         .about-text h2 { font-size: 2.6rem; margin-bottom: 25px; }
         .about-text p { margin-bottom: 20px; color: var(--text-medium); font-size: 1.05rem; font-weight: 400; line-height: 1.8; }
         .about-text strong { color: var(--brand-teal); font-weight: 700; }
 
         .about-image {
-            flex: 1;
+            flex: 0.8;
+            max-width: 420px; 
+            height: 550px; 
             border-radius: 100px 20px 20px 20px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            margin: 0 auto; 
         }
-        .about-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .about-image img { 
+            width: 100%; 
+            height: 100%; 
+            display: block; 
+            object-fit: cover; 
+            object-position: top center; 
+        }
 
         /* =========================================
            SECCIÓN 5: TESTIMONIOS 
@@ -426,12 +437,12 @@
         .step p { color: var(--text-medium); font-weight: 400; line-height: 1.6; }
 
         /* =========================================
-           SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL (CORREGIDO)
+           SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL
            ========================================= */
         .final-cta {
             padding: 90px 5%;
             text-align: center;
-            background-color: var(--brand-teal); /* Elegancia en lugar de verde neón */
+            background-color: var(--brand-teal); 
             color: #FFF;
         }
         
@@ -450,7 +461,7 @@
 
         .btn-secondary {
             display: inline-block;
-            background-color: #FFF; /* Contraste inverso de alta conversión */
+            background-color: #FFF; 
             color: var(--brand-teal);
             padding: 18px 45px; 
             text-decoration: none;
@@ -469,11 +480,11 @@
         }
 
         /* =========================================
-           FOOTER (ELEGANCIA ABSOLUTA)
+           FOOTER 
            ========================================= */
         footer {
             background-color: var(--footer-bg); 
-            color: #A0AEC0; /* Texto gris suave para alto contraste sin ser blanco puro */
+            color: #A0AEC0; 
             padding: 60px 5% 30px 5%;
         }
 

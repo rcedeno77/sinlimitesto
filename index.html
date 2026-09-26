@@ -68,7 +68,7 @@
         }
 
         /* =========================================
-           HEADER (CORREGIDO: TAMAÑO DE LOGO RESTAURADO)
+           HEADER (LOGOTIPO GRANDE Y PROPORCIONADO)
            ========================================= */
         header {
             padding: 10px 5%;
@@ -82,7 +82,7 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(8px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            height: 105px; /* Altura generosa para el header */
+            height: 115px; /* Altura optimizada para dar espacio al logotipo grande */
         }
 
         .logo-container {
@@ -93,10 +93,10 @@
         }
 
         .logo-image {
-            height: 85px; /* Tamaño del logo restaurado y bien visible */
+            height: 90px; /* Logotipo imponente, claro y de gran presencia visual */
             width: auto;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Elimina automáticamente el fondo blanco de la imagen */
+            mix-blend-mode: multiply; 
         }
 
         .header-btn {
@@ -104,7 +104,7 @@
             color: var(--brand-teal);
             font-size: 0.95rem;
             font-weight: 700;
-            padding: 10px 24px;
+            padding: 12px 28px;
             border-radius: 30px;
             border: 2px solid var(--brand-teal);
             background-color: transparent;
@@ -124,7 +124,7 @@
             min-height: 95vh;
             display: flex;
             align-items: center;
-            padding: 140px 5% 100px 5%; 
+            padding: 150px 5% 100px 5%; /* Padding superior ajustado para la nueva altura del header */
             background-color: var(--bg-white); 
             position: relative; 
         }
@@ -515,8 +515,8 @@
         }
 
         .footer-logo-img {
-            height: 65px; 
-            max-width: 250px;
+            height: 75px; 
+            max-width: 280px;
             width: auto;
             object-fit: contain;
             filter: brightness(0) invert(1);
@@ -619,7 +619,7 @@
            ========================================= */
         @media (max-width: 992px) {
             header { height: 90px; }
-            .logo-image { height: 60px; } 
+            .logo-image { height: 70px; } 
             .hero { min-height: auto; padding-top: 130px; }
             .hero-container { flex-direction: column; text-align: center; }
             .hero h1 { font-size: 2.6rem; }
@@ -630,7 +630,7 @@
             .process-steps { flex-direction: column; }
             .footer-content, .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
             .footer-links a { margin: 10px; display: inline-block; }
-            .footer-logo-img { height: 50px; } 
+            .footer-logo-img { height: 55px; } 
             .floating-whatsapp { bottom: 20px; right: 20px; width: 55px; height: 55px; }
             .floating-whatsapp svg { width: 30px; height: 30px; }
         }

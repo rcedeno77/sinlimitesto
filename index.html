@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Claudia Ortega | Terapia Ocupacional Infantil de Élite</title>
+    <title>Sin Límites TO | Terapia Ocupacional por Claudia Ortega</title>
     
-    <!-- Fuentes de Google -->
+    <!-- Fuentes de Google: Mantenemos Inter (muy legible) pero cambiamos la Serif por algo más moderno -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
-           VARIABLES DE COLOR Y DISEÑO (HIGH TICKET)
+           VARIABLES DE COLOR (Basadas en tu Logo)
            ========================================= */
         :root {
-            --bg-offwhite: #F9F8F6;     /* Blanco Hueso más limpio */
-            --accent-sage: #4A5A4E;     /* Verde Salvia más profundo y elegante */
-            --accent-sand: #D9CBB8;     /* Beige Arena */
-            --text-charcoal: #1A1A1A;   /* Casi negro, más contraste */
-            --text-light: #666666;      /* Gris sofisticado */
-            --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            /* Colores extraídos del logo */
+            --brand-teal: #1A7585;      /* El verde azulado principal del texto y la figura */
+            --brand-blue: #2A79C2;      /* El azul medio de la pierna */
+            --brand-green: #9CCB53;     /* El verde claro del brazo */
+            
+            /* Colores de fondo y texto */
+            --bg-light: #FAFAFA;        /* Un gris/blanco muy limpio y amigable */
+            --bg-white: #FFFFFF;
+            --text-dark: #2D3748;       /* Un gris oscuro casi negro, más suave para leer */
+            --text-medium: #4A5568;     /* Gris para párrafos */
+            
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -30,196 +36,181 @@
         }
 
         body {
-            background-color: var(--bg-offwhite);
-            color: var(--text-charcoal);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased; /* Suaviza las fuentes, tacto premium */
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Usamos Merriweather para los títulos, da un toque profesional pero cercano */
         h1, h2, h3, h4, .serif {
-            font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            color: var(--text-charcoal);
-            letter-spacing: -0.5px;
+            font-family: 'Merriweather', serif;
+            color: var(--brand-teal); /* Los títulos en el color principal de tu marca */
+            font-weight: 700;
         }
 
         /* =========================================
-           ANIMACIONES DE ENTRADA
-           ========================================= */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: var(--transition);
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* =========================================
-           BOTONES Y ENLACES (Estilo Luxury)
+           BOTONES Y ENLACES (Accesibles y Llamativos)
            ========================================= */
         .btn-primary {
             display: inline-block;
-            background-color: var(--accent-sage);
+            background-color: var(--brand-teal);
             color: #FFF;
-            padding: 18px 42px;
+            padding: 16px 32px;
             text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px; /* Bordes redondeados = más amigable */
             transition: var(--transition);
-            border: 1px solid var(--accent-sage);
-            margin-top: 40px;
-            cursor: pointer;
+            border: 2px solid var(--brand-teal);
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(26, 117, 133, 0.2); /* Sombra sutil */
         }
 
         .btn-primary:hover {
-            background-color: transparent;
-            color: var(--accent-sage);
+            background-color: #145d6a; /* Un tono más oscuro al pasar el ratón */
+            border-color: #145d6a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 117, 133, 0.3);
+            color: #FFF;
         }
 
         /* =========================================
-           NAVEGACIÓN (HEADER CON GLASSMORPHISM)
+           NAVEGACIÓN (HEADER)
            ========================================= */
         header {
-            padding: 20px 10%;
+            padding: 15px 5%; /* Más pegado a los bordes */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed; /* Fijo para que acompañe al usuario */
+            position: fixed;
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(249, 248, 246, 0.85); /* Semitransparente */
-            backdrop-filter: blur(12px); /* Efecto cristal premium */
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.95); /* Blanco casi sólido para que el logo se vea perfecto */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra suave para separar del fondo */
         }
 
-        /* CONTENEDOR DEL LOGO */
         .logo-container {
             display: flex;
             align-items: center;
-            text-decoration: none;
         }
 
-        .logo-text {
-            font-size: 1.3rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: var(--accent-sage);
-            text-transform: uppercase;
-        }
-        
-        .logo-text span {
-            font-weight: 300;
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-left: 5px;
-        }
-
-        /* Estilo para cuando subas tu logo real en imagen */
+        /* Estilo para tu imagen de logo */
         .logo-image {
-            max-height: 40px; /* Altura ideal para desktop */
+            max-height: 55px; /* Tamaño ideal para que se lean las letras del logo */
             width: auto;
-            display: none; /* Cambia a 'block' y oculta 'logo-text' cuando tengas tu logo */
         }
 
         .nav-link {
             text-decoration: none;
-            color: var(--text-charcoal);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--text-dark);
+            font-size: 0.95rem;
             font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .nav-link.highlight {
+            background-color: var(--brand-green); /* Usamos el verde claro para el botón del menú */
+            color: var(--text-dark); /* Texto oscuro para que contraste bien con el verde claro */
+        }
+
+        .nav-link.highlight:hover {
+            background-color: #8bb847;
         }
 
         /* =========================================
-           SECCIÓN 1: HERO (DISEÑO EDITORIAL)
+           SECCIÓN 1: HERO
            ========================================= */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh; /* Un poco menos alto que toda la pantalla */
             display: flex;
             align-items: center;
-            padding: 0 10%;
-            padding-top: 80px;
+            padding: 0 5%;
+            padding-top: 100px; /* Espacio para el header fijo */
             position: relative;
+            background-color: var(--bg-white);
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 600px;
             position: relative;
             z-index: 2;
         }
 
         .hero-label {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-sage);
-            margin-bottom: 20px;
-            display: block;
+            letter-spacing: 1px;
+            color: var(--brand-blue); /* Usamos el azul de la pierna del logo */
+            margin-bottom: 15px;
+            display: inline-block;
             font-weight: 600;
+            background-color: rgba(42, 121, 194, 0.1); /* Fondo azul clarito */
+            padding: 5px 15px;
+            border-radius: 20px;
         }
 
         .hero h1 {
-            font-size: 4rem; /* Más grande, más impacto */
-            line-height: 1.1;
-            margin-bottom: 30px;
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark); /* El título en oscuro para máxima lectura */
+        }
+        
+        .hero h1 span {
+            color: var(--brand-teal); /* Destacamos una palabra con el color de tu marca */
         }
 
         .hero p {
             font-size: 1.15rem;
-            color: var(--text-light);
+            color: var(--text-medium);
             max-width: 550px;
-            font-weight: 300;
-            line-height: 1.8;
+            font-weight: 400;
+            line-height: 1.6;
         }
 
-        /* Elemento decorativo refinado */
-        .sand-shape {
+        /* Bloque visual de la derecha (Puedes poner una foto tuya o de un niño jugando) */
+        .hero-image-container {
             position: absolute;
-            right: 0;
-            top: 0;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-45%);
             width: 45%;
-            height: 100vh;
-            background-color: var(--accent-sand);
-            z-index: 1;
-            /* Se añade una imagen de fondo sutil para dar textura (opcional) */
-            background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.8;
+            height: 70vh;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            background-color: #f0f0f0; /* Fondo temporal mientras pones foto */
         }
         
-        .sand-shape::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .hero-image-placeholder {
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, var(--bg-offwhite) 0%, rgba(249, 248, 246, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--brand-teal);
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
         }
 
         /* =========================================
            RESPONSIVE DESIGN (MÓVILES)
            ========================================= */
-        @media (max-width: 768px) {
-            header { padding: 15px 5%; }
-            .hero h1 { font-size: 2.8rem; }
-            .hero { padding-top: 140px; padding-bottom: 60px; }
-            .sand-shape { width: 100%; height: 100%; top: 0; opacity: 0.15; background-blend-mode: overlay; }
-            .sand-shape::after { background: var(--bg-offwhite); opacity: 0.8; }
+        @media (max-width: 992px) {
+            .hero-image-container { display: none; /* Ocultamos la imagen en móviles para dar prioridad al texto */ }
+            .hero-content { max-width: 100%; text-align: center; margin: 0 auto; }
+            .hero { justify-content: center; }
+            .hero h1 { font-size: 2.5rem; }
         }
-
-        /* ... Mantenemos el resto de tu CSS (Secciones 2 a la 7) intactas por ahora ... */
-        /* (Pega aquí el CSS de las secciones .empathy, .services, .about, .testimonials, .process, footer) */
-
     </style>
 </head>
 <body>
@@ -227,42 +218,28 @@
     <!-- HEADER / NAVEGACIÓN -->
     <header>
         <a href="#" class="logo-container">
-            <!-- OPCIÓN 1: LOGO EN TEXTO ELEGANTE (Activo ahora) -->
-            <div class="logo-text serif">Claudia Ortega <span>| T.O.</span></div>
-            
-            <!-- OPCIÓN 2: LOGO EN IMAGEN (Descomenta y cambia el src cuando tengas tu logo) -->
-            <!-- <img src="ruta-a-tu-logo.png" alt="Lic. Claudia Ortega Logo" class="logo-image"> -->
+            <!-- AQUÍ VA TU LOGO. Asegúrate de que el archivo 'logo1.png' esté en la misma carpeta que tu archivo HTML -->
+            <img src="logo1.png" alt="Sin Límites TO Logo" class="logo-image">
         </a>
-        <a href="#proceso" class="nav-link">Aplicar ahora</a>
+        <a href="#contacto" class="nav-link highlight">Agendar Cita</a>
     </header>
 
     <!-- SECCIÓN 1: HERO -->
     <section class="hero">
-        <div class="sand-shape"></div>
-        <div class="hero-content fade-in">
-            <span class="hero-label">Terapia Ocupacional Infantil Privada</span>
-            <h1>Desbloquea el máximo potencial de tu hijo.</h1>
-            <p>Intervenciones basadas en neurociencia, diseñadas para integrarse sin fricción en el exclusivo estilo de vida de su familia. Discreción, calidez y resultados de élite.</p>
-            <a href="#proceso" class="btn-primary">Aplicar a Evaluación Privada</a>
+        <div class="hero-content">
+            <span class="hero-label">Terapia Ocupacional en Panamá</span>
+            <h1>Ayudamos a tu hijo a alcanzar su <span>máxima independencia</span></h1>
+            <p>Superamos barreras juntos. Ofrecemos terapia ocupacional personalizada para que los niños mejoren su desarrollo, ganen confianza y participen plenamente en su día a día.</p>
+            <a href="#contacto" class="btn-primary">Quiero más información</a>
+        </div>
+        
+        <!-- Contenedor para una foto tuya trabajando con un niño o de un espacio agradable -->
+        <div class="hero-image-container">
+            <div class="hero-image-placeholder">
+                [Aquí irá una foto profesional tuya trabajando o una imagen cálida de un niño]
+            </div>
         </div>
     </section>
 
-    <!-- El resto de tu HTML (Empatía, Servicios, etc.) va aquí debajo -->
-
-    <script>
-        // Mismo script de animación que ya tenías (¡está perfecto!)
-        document.addEventListener('DOMContentLoaded', () => {
-            const faders = document.querySelectorAll('.fade-in');
-            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                });
-            }, appearOptions);
-            faders.forEach(fader => appearOnScroll.observe(fader));
-        });
-    </script>
 </body>
 </html>

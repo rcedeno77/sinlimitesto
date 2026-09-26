@@ -8,10 +8,10 @@
     <!-- Favicon Actualizado -->
     <link rel="icon" href="logotipo.png" type="image/png">
     
-    <!-- Fuentes de Google: Lora (Títulos suaves y orgánicos) y Nunito (Textos cálidos y redondeados) -->
+    <!-- Fuentes de Google: Poppins (Títulos amigables y profesionales) y Nunito (Textos cálidos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
@@ -22,11 +22,11 @@
             --brand-teal-dark: #125460; 
             --brand-blue: #2A79C2;      
             --brand-green: #9CCB53;     
-            --bg-light: #F4F7F7; /* Un gris-azulado muy tenue para contrastar con el blanco */     
+            --bg-light: #F4F7F7;     
             --bg-white: #FFFFFF;        
             --text-dark: #2D3748;       
             --text-medium: #4A5568; 
-            --footer-bg: #1A202C; /* Gris carbón elegante para el footer */    
+            --footer-bg: #1A202C; 
             --transition: all 0.3s ease;
         }
 
@@ -34,6 +34,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Desplazamiento suave para los enlaces del footer */
         }
 
         body {
@@ -45,8 +49,9 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* Cambio de tipografía en títulos a Poppins */
         h1, h2, h3, h4 {
-            font-family: 'Lora', serif;
+            font-family: 'Poppins', sans-serif;
             color: var(--brand-teal);
             font-weight: 600;
             letter-spacing: -0.5px;
@@ -80,15 +85,15 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(8px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            height: 105px; /* Altura incrementada para acomodar un logo más grande */
+            height: 105px; 
         }
 
         .logo-image {
-            height: 105px; /* Logo más grande en el Header */
+            height: 105px; 
             max-width: 320px;
             width: auto;
             object-fit: contain;
-            transform: scale(1.15); /* Aumentado ligeramente para mayor impacto visual */
+            transform: scale(1.15); 
             transform-origin: left center;
         }
 
@@ -102,6 +107,7 @@
             border: 2px solid var(--brand-teal);
             background-color: transparent;
             transition: var(--transition);
+            font-family: 'Poppins', sans-serif; /* Consistencia en botón */
         }
 
         .header-btn:hover {
@@ -118,6 +124,20 @@
             align-items: center;
             padding: 130px 5% 60px 5%;
             background-color: var(--bg-white); 
+            position: relative; /* Para el divisor */
+            padding-bottom: 100px; /* Espacio extra para el divisor visual */
+        }
+
+        /* Separación visual más evidente usando un pseudo-elemento sutil */
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, var(--brand-teal));
+            opacity: 0.1;
         }
 
         .hero-container {
@@ -146,11 +166,12 @@
             background-color: rgba(42, 121, 194, 0.08);
             padding: 6px 16px;
             border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .hero h1 {
             font-size: 3.2rem;
-            line-height: 1.15;
+            line-height: 1.2; /* Ligeramente aumentado para Poppins */
             margin-bottom: 20px;
             color: var(--text-dark);
         }
@@ -158,7 +179,7 @@
         .hero h1 span {
             color: var(--brand-teal);
             font-style: italic;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .hero p {
@@ -176,10 +197,11 @@
             padding: 18px 42px; 
             text-decoration: none;
             font-size: 1.05rem;
-            font-weight: 700;
+            font-weight: 600;
             border-radius: 30px;
             transition: var(--transition);
             box-shadow: 0 4px 15px rgba(26, 117, 133, 0.25);
+            font-family: 'Poppins', sans-serif;
         }
 
         .btn-primary:hover {
@@ -193,6 +215,7 @@
             display: flex;
             justify-content: flex-end;
             position: relative;
+            z-index: 2;
         }
 
         .hero-image-wrapper img {
@@ -203,7 +226,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             object-fit: cover;
             position: relative;
-            z-index: 2;
         }
 
         /* =========================================
@@ -353,7 +375,7 @@
         
         .testimonials::before {
             content: '\201C';
-            font-family: 'Lora', serif;
+            font-family: 'Poppins', serif;
             position: absolute;
             top: -30px;
             left: 50%;
@@ -377,6 +399,7 @@
             margin-bottom: 25px; 
             line-height: 1.5; 
             color: var(--brand-teal-dark);
+            font-family: 'Nunito', sans-serif; /* Asegurando legibilidad en cursiva */
         }
         .testimonial-block p.author { 
             font-size: 0.95rem; 
@@ -424,8 +447,8 @@
         }
 
         .step-number { 
-            font-family: 'Lora', serif; 
-            font-weight: 600; 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 700; 
             font-style: italic; 
             font-size: 3.2rem; 
             color: var(--brand-green); 
@@ -470,6 +493,7 @@
             border-radius: 30px;
             transition: var(--transition);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-family: 'Poppins', sans-serif;
         }
 
         .btn-secondary:hover {
@@ -499,8 +523,9 @@
             margin: 0 auto 30px auto;
         }
 
+        /* Logo convertido a blanco para fondo oscuro */
         .footer-logo-img {
-            height: 75px; /* Logo de Footer más grande */
+            height: 75px; 
             max-width: 250px;
             width: auto;
             object-fit: contain;
@@ -521,6 +546,7 @@
             font-size: 0.95rem;
             transition: var(--transition);
             font-weight: 400;
+            font-family: 'Poppins', sans-serif; /* Manteniendo coherencia */
         }
         .footer-links a:hover { color: var(--brand-green); }
 
@@ -603,7 +629,7 @@
            ========================================= */
         @media (max-width: 992px) {
             header { height: 80px; }
-            .logo-image { height: 75px; } /* Ajuste de logo header en móviles */
+            .logo-image { height: 75px; } 
             .hero { min-height: auto; padding-top: 130px; }
             .hero-container { flex-direction: column; text-align: center; }
             .hero h1 { font-size: 2.6rem; }
@@ -613,7 +639,7 @@
             .process-steps { flex-direction: column; }
             .footer-content, .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
             .footer-links a { margin: 10px; display: inline-block; }
-            .footer-logo-img { height: 60px; } /* Ajuste de logo footer en móviles */
+            .footer-logo-img { height: 60px; } 
             .floating-whatsapp { bottom: 20px; right: 20px; width: 55px; height: 55px; }
             .floating-whatsapp svg { width: 30px; height: 30px; }
         }
@@ -630,7 +656,7 @@
     </header>
 
     <!-- SECCIÓN 1: HERO -->
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="hero-container">
             <div class="hero-content fade-in">
                 <span class="hero-label">Terapia Ocupacional Infantil</span>
@@ -651,8 +677,8 @@
         <p>No tienes que descifrar estos retos a solas. Nuestro objetivo va más allá del consultorio: te brindamos herramientas prácticas, probadas y sencillas para que la paz, el equilibrio y las sonrisas regresen a tu hogar.</p>
     </section>
 
-    <!-- SECCIÓN 3: SERVICIOS -->
-    <section class="services">
+    <!-- SECCIÓN 3: SERVICIOS (Con ID para anclaje) -->
+    <section class="services" id="servicios">
         <h2 class="section-title fade-in">Nuestros Programas de Apoyo</h2>
         <div class="services-grid">
             <div class="service-card fade-in">
@@ -670,8 +696,8 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 4: AUTORIDAD -->
-    <section class="about">
+    <!-- SECCIÓN 4: AUTORIDAD (Con ID para anclaje) -->
+    <section class="about" id="sobre-mi">
         <div class="about-container">
             <div class="about-text fade-in">
                 <h2>Experiencia, Dedicación y Calidez Humana</h2>
@@ -692,7 +718,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 6: EL PROCESO -->
+    <!-- SECCIÓN 6: EL PROCESO (Con ID para anclaje) -->
     <section id="proceso" class="process">
         <div class="process-container">
             <h2 class="section-title fade-in">¿Cómo empezamos a trabajar juntos?</h2>
@@ -726,13 +752,14 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <a href="#" class="footer-logo-link">
+            <a href="#inicio" class="footer-logo-link">
                 <!-- Llamado explícito a logopng.png para el footer -->
                 <img src="logopng.png" alt="Sin Límites TO" class="footer-logo-img">
             </a>
             <div class="footer-links">
-                <a href="#">Servicios</a>
-                <a href="#">Sobre Mí</a>
+                <!-- Enlaces actualizados apuntando a los ID de las secciones -->
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-mi">Sobre Mí</a>
                 <a href="#proceso">Contacto</a>
             </div>
         </div>

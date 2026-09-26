@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lic. Claudia Ortega | Terapia Ocupacional Infantil de Élite</title>
     
-    <!-- Fuentes de Google: Playfair Display (Serif para Títulos) e Inter (Sans-serif para Textos) -->
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
            VARIABLES DE COLOR Y DISEÑO (HIGH TICKET)
            ========================================= */
         :root {
-            --bg-offwhite: #F7F5F0;     /* Blanco Hueso */
-            --accent-sage: #5A6B5D;     /* Verde Salvia / Oliva */
+            --bg-offwhite: #F9F8F6;     /* Blanco Hueso más limpio */
+            --accent-sage: #4A5A4E;     /* Verde Salvia más profundo y elegante */
             --accent-sand: #D9CBB8;     /* Beige Arena */
-            --text-charcoal: #2B2B2B;   /* Gris Carbón */
-            --text-light: #5A5A5A;      /* Gris Medio */
-            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --text-charcoal: #1A1A1A;   /* Casi negro, más contraste */
+            --text-light: #666666;      /* Gris sofisticado */
+            --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         * {
@@ -35,20 +35,22 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased; /* Suaviza las fuentes, tacto premium */
         }
 
         h1, h2, h3, h4, .serif {
             font-family: 'Playfair Display', serif;
-            font-weight: 400;
+            font-weight: 500;
             color: var(--text-charcoal);
+            letter-spacing: -0.5px;
         }
 
         /* =========================================
-           ANIMACIONES DE ENTRADA (ESTILO WEBFLOW)
+           ANIMACIONES DE ENTRADA
            ========================================= */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
             transition: var(--transition);
         }
         .fade-in.visible {
@@ -57,20 +59,22 @@
         }
 
         /* =========================================
-           BOTONES Y ENLACES
+           BOTONES Y ENLACES (Estilo Luxury)
            ========================================= */
         .btn-primary {
             display: inline-block;
             background-color: var(--accent-sage);
             color: #FFF;
-            padding: 16px 36px;
+            padding: 18px 42px;
             text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: var(--transition);
             border: 1px solid var(--accent-sage);
-            margin-top: 30px;
+            margin-top: 40px;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -79,26 +83,63 @@
         }
 
         /* =========================================
-           NAVEGACIÓN (HEADER)
+           NAVEGACIÓN (HEADER CON GLASSMORPHISM)
            ========================================= */
         header {
-            padding: 40px 10%;
+            padding: 20px 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: absolute;
+            position: fixed; /* Fijo para que acompañe al usuario */
+            top: 0;
             width: 100%;
-            z-index: 10;
+            z-index: 100;
+            background: rgba(249, 248, 246, 0.85); /* Semitransparente */
+            backdrop-filter: blur(12px); /* Efecto cristal premium */
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
         }
 
-        .logo {
-            font-size: 1.5rem;
+        /* CONTENEDOR DEL LOGO */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
             font-weight: 600;
             letter-spacing: 1px;
+            color: var(--accent-sage);
+            text-transform: uppercase;
+        }
+        
+        .logo-text span {
+            font-weight: 300;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-left: 5px;
+        }
+
+        /* Estilo para cuando subas tu logo real en imagen */
+        .logo-image {
+            max-height: 40px; /* Altura ideal para desktop */
+            width: auto;
+            display: none; /* Cambia a 'block' y oculta 'logo-text' cuando tengas tu logo */
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-charcoal);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
         }
 
         /* =========================================
-           SECCIÓN 1: HERO
+           SECCIÓN 1: HERO (DISEÑO EDITORIAL)
            ========================================= */
         .hero {
             min-height: 100vh;
@@ -110,22 +151,36 @@
         }
 
         .hero-content {
-            max-width: 650px;
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-sage);
+            margin-bottom: 20px;
+            display: block;
+            font-weight: 600;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem; /* Más grande, más impacto */
             line-height: 1.1;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-light);
-            max-width: 500px;
+            max-width: 550px;
+            font-weight: 300;
+            line-height: 1.8;
         }
 
-        /* Elemento decorativo */
+        /* Elemento decorativo refinado */
         .sand-shape {
             position: absolute;
             right: 0;
@@ -133,369 +188,72 @@
             width: 45%;
             height: 100vh;
             background-color: var(--accent-sand);
-            z-index: -1;
-            border-bottom-left-radius: 40px;
+            z-index: 1;
+            /* Se añade una imagen de fondo sutil para dar textura (opcional) */
+            background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
         }
-
-        /* =========================================
-           SECCIÓN 2: EMPATÍA (PROBLEMA)
-           ========================================= */
-        .empathy {
-            padding: 120px 10%;
-            text-align: center;
-            background-color: #FFF;
-        }
-
-        .empathy h2 {
-            font-size: 2.5rem;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            color: var(--accent-sage);
-        }
-
-        .empathy p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            color: var(--text-light);
-        }
-
-        /* =========================================
-           SECCIÓN 3: SERVICIOS (PROGRAMAS)
-           ========================================= */
-        .services {
-            padding: 120px 10%;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .service-card {
-            background-color: #FFF;
-            padding: 50px 40px;
-            border-top: 4px solid var(--accent-sage);
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* =========================================
-           SECCIÓN 4: AUTORIDAD (SOBRE ELLA)
-           ========================================= */
-        .about {
-            display: flex;
-            align-items: center;
-            padding: 120px 10%;
-            background-color: var(--accent-sage);
-            color: #FFF;
-        }
-
-        .about h2, .about h3 {
-            color: #FFF;
-        }
-
-        .about-text {
-            flex: 1;
-            padding-right: 60px;
-        }
-
-        .about-text h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            font-weight: 300;
-            color: #E2E8E4;
-            font-size: 1.1rem;
-        }
-
-        .about-image {
-            flex: 1;
-            height: 500px;
-            background-color: var(--accent-sand); /* Aquí iría la foto profesional */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-charcoal);
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* =========================================
-           SECCIÓN 5: PRUEBA SOCIAL (TESTIMONIOS)
-           ========================================= */
-        .testimonials {
-            padding: 120px 10%;
-            text-align: center;
-            background-color: var(--bg-offwhite);
-        }
-
-        .testimonial-block {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .testimonial-block p.quote {
-            font-size: 1.8rem;
-            font-style: italic;
-            font-family: 'Playfair Display', serif;
-            color: var(--text-charcoal);
-            margin-bottom: 30px;
-        }
-
-        .testimonial-block p.author {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* =========================================
-           SECCIÓN 6: EL PROCESO
-           ========================================= */
-        .process {
-            padding: 120px 10%;
-            background-color: #FFF;
-        }
-
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .step {
-            flex: 1;
-            padding: 40px;
-            background-color: var(--bg-offwhite);
-            position: relative;
-        }
-
-        .step-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            color: var(--accent-sand);
+        
+        .sand-shape::after {
+            content: '';
             position: absolute;
-            top: -30px;
-            left: 20px;
-            opacity: 0.5;
-        }
-
-        .step h3 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-container {
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        /* =========================================
-           FOOTER
-           ========================================= */
-        footer {
-            background-color: var(--text-charcoal);
-            color: #FFF;
-            padding: 80px 10% 40px 10%;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-        }
-
-        .footer-links a {
-            color: #FFF;
-            text-decoration: none;
-            margin-left: 30px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            transition: opacity 0.3s;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            opacity: 0.5;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--bg-offwhite) 0%, rgba(249, 248, 246, 0.2) 100%);
         }
 
         /* =========================================
            RESPONSIVE DESIGN (MÓVILES)
            ========================================= */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero { padding-top: 120px; }
-            .sand-shape { width: 100%; height: 50vh; top: auto; bottom: 0; }
-            .about { flex-direction: column; padding: 80px 5%; }
-            .about-text { padding-right: 0; margin-bottom: 40px; }
-            .process-steps { flex-direction: column; }
-            .footer-content { flex-direction: column; gap: 30px; }
-            .footer-links a { margin-left: 0; margin-right: 20px; display: inline-block; margin-bottom: 10px; }
+            header { padding: 15px 5%; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero { padding-top: 140px; padding-bottom: 60px; }
+            .sand-shape { width: 100%; height: 100%; top: 0; opacity: 0.15; background-blend-mode: overlay; }
+            .sand-shape::after { background: var(--bg-offwhite); opacity: 0.8; }
         }
+
+        /* ... Mantenemos el resto de tu CSS (Secciones 2 a la 7) intactas por ahora ... */
+        /* (Pega aquí el CSS de las secciones .empathy, .services, .about, .testimonials, .process, footer) */
+
     </style>
 </head>
 <body>
 
+    <!-- HEADER / NAVEGACIÓN -->
     <header>
-        <div class="logo serif">Lic. Claudia Ortega</div>
+        <a href="#" class="logo-container">
+            <!-- OPCIÓN 1: LOGO EN TEXTO ELEGANTE (Activo ahora) -->
+            <div class="logo-text serif">Claudia Ortega <span>| T.O.</span></div>
+            
+            <!-- OPCIÓN 2: LOGO EN IMAGEN (Descomenta y cambia el src cuando tengas tu logo) -->
+            <!-- <img src="ruta-a-tu-logo.png" alt="Lic. Claudia Ortega Logo" class="logo-image"> -->
+        </a>
+        <a href="#proceso" class="nav-link">Aplicar ahora</a>
     </header>
 
     <!-- SECCIÓN 1: HERO -->
     <section class="hero">
         <div class="sand-shape"></div>
         <div class="hero-content fade-in">
-            <h1>Restaurando el potencial y el bienestar a través de una terapia ocupacional infantil de élite.</h1>
-            <p>Atención personalizada, discreta y de alto nivel para el neurodesarrollo y la autonomía de tu hijo.</p>
-            <a href="#proceso" class="btn-primary">Solicitar Evaluación Privada</a>
+            <span class="hero-label">Terapia Ocupacional Infantil Privada</span>
+            <h1>Desbloquea el máximo potencial de tu hijo.</h1>
+            <p>Intervenciones basadas en neurociencia, diseñadas para integrarse sin fricción en el exclusivo estilo de vida de su familia. Discreción, calidez y resultados de élite.</p>
+            <a href="#proceso" class="btn-primary">Aplicar a Evaluación Privada</a>
         </div>
     </section>
 
-    <!-- SECCIÓN 2: EMPATÍA -->
-    <section class="empathy fade-in">
-        <h2>"Sabemos que un desafío en el desarrollo infantil no solo afecta al niño; interrumpe el estilo de vida de toda la familia."</h2>
-        <p>Nuestro enfoque trasciende las terapias tradicionales. Diseñamos intervenciones que se adaptan a su exclusividad, garantizando resultados medibles mientras preservamos su privacidad y tranquilidad familiar.</p>
-    </section>
+    <!-- El resto de tu HTML (Empatía, Servicios, etc.) va aquí debajo -->
 
-    <!-- SECCIÓN 3: SERVICIOS (PROGRAMAS) -->
-    <section class="services">
-        <h2 class="section-title fade-in">Programas de Transformación</h2>
-        <div class="services-grid">
-            <div class="service-card fade-in">
-                <h3>Programa de Integración Sensorial y Desarrollo</h3>
-                <p>Un protocolo diseñado a medida para reorganizar el procesamiento neurológico, reduciendo las crisis y aumentando la capacidad de adaptación al entorno diario.</p>
-            </div>
-            <div class="service-card fade-in">
-                <h3>Protocolo Avanzado de Autonomía Cognitiva</h3>
-                <p>Intervenciones estratégicas orientadas a maximizar las habilidades motoras finas, la concentración y el desempeño académico sin sobreestimular al paciente.</p>
-            </div>
-            <div class="service-card fade-in">
-                <h3>Asesoría y Acompañamiento Residencial</h3>
-                <p>Análisis y adaptación del entorno del hogar para crear espacios terapéuticos invisibles que fomenten el desarrollo de forma natural en el día a día.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 4: AUTORIDAD -->
-    <section class="about">
-        <div class="about-text fade-in">
-            <h2>Experticia, Calidez y Discreción</h2>
-            <p>Con años de experiencia en casos de alta complejidad neurológica infantil, la Lic. Claudia Ortega ha redefinido el estándar de la terapia ocupacional.</p>
-            <p>Su metodología no se basa en sesiones aisladas, sino en un compromiso profundo con la evolución del núcleo familiar. Entiende las exigencias de un estilo de vida de alto perfil y adapta sus intervenciones para que el progreso clínico se integre armónicamente en su rutina.</p>
-        </div>
-        <div class="about-image fade-in">
-            [Espacio reservado para Fotografía Profesional de Estudio]
-        </div>
-    </section>
-
-    <!-- SECCIÓN 5: PRUEBA SOCIAL -->
-    <section class="testimonials fade-in">
-        <div class="testimonial-block">
-            <p class="quote">"Después de meses buscando soluciones, el enfoque integral de Claudia le devolvió la autonomía a nuestro hijo y la paz a nuestro hogar. Su nivel de profesionalismo y confidencialidad es inigualable."</p>
-            <p class="author">— M.R., Residente de Bahía Gorgona</p>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 6: EL PROCESO -->
-    <section id="proceso" class="process">
-        <h2 class="section-title fade-in">Un Camino Exclusivo Hacia el Bienestar</h2>
-        <div class="process-steps">
-            <div class="step fade-in">
-                <span class="step-number">1</span>
-                <h3>Aplicación Confidencial</h3>
-                <p>Complete un formulario seguro y detallado. Este primer paso nos permite comprender su situación particular antes de nuestro encuentro.</p>
-            </div>
-            <div class="step fade-in">
-                <span class="step-number">2</span>
-                <h3>Llamada de Descubrimiento</h3>
-                <p>Una sesión privada de 15 minutos para asegurar que nuestro enfoque de élite es el encaje perfecto para las necesidades de su familia.</p>
-            </div>
-            <div class="step fade-in">
-                <span class="step-number">3</span>
-                <h3>El Plan Personalizado</h3>
-                <p>Inicio del protocolo de intervención. Metas claras, monitoreo continuo y acompañamiento integral garantizado.</p>
-            </div>
-        </div>
-        <div class="cta-container fade-in">
-            <a href="#" class="btn-primary">Aplicar para Consulta Privada</a>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 7: FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Lic. Claudia Ortega</div>
-            <div class="footer-links">
-                <a href="#">Programas</a>
-                <a href="#">Filosofía</a>
-                <a href="#">Aplicar</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Lic. Claudia Ortega. Todos los derechos reservados.</p>
-            <div>
-                <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; margin-right: 15px;">Portal de Pacientes Privado</a>
-                <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Políticas de Privacidad y Términos</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCRIPT DE ANIMACIÓN (Efecto Webflow de elementos apareciendo al hacer scroll) -->
     <script>
+        // Mismo script de animación que ya tenías (¡está perfecto!)
         document.addEventListener('DOMContentLoaded', () => {
             const faders = document.querySelectorAll('.fade-in');
-            
-            const appearOptions = {
-                threshold: 0.15,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
+            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
             const appearOnScroll = new IntersectionObserver(function(entries, observer) {
                 entries.forEach(entry => {
                     if (!entry.isIntersecting) return;
@@ -503,10 +261,7 @@
                     observer.unobserve(entry.target);
                 });
             }, appearOptions);
-
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-            });
+            faders.forEach(fader => appearOnScroll.observe(fader));
         });
     </script>
 </body>

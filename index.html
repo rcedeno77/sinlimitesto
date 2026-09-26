@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sin Límites TO | Terapia Ocupacional por Claudia Ortega</title>
+    <title>Sin Límites TO | Terapia Ocupacional por Lic. Claudia Ortega</title>
     
-    <!-- Fuentes de Google: Mantenemos Inter (muy legible) pero cambiamos la Serif por algo más moderno -->
+    <!-- Fuentes de Google: Inter (Lectura clara) y Merriweather (Títulos profesionales y cálidos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
@@ -15,18 +15,17 @@
            VARIABLES DE COLOR (Basadas en tu Logo)
            ========================================= */
         :root {
-            /* Colores extraídos del logo */
-            --brand-teal: #1A7585;      /* El verde azulado principal del texto y la figura */
-            --brand-blue: #2A79C2;      /* El azul medio de la pierna */
-            --brand-green: #9CCB53;     /* El verde claro del brazo */
+            --brand-teal: #1A7585;      /* Verde azulado principal */
+            --brand-blue: #2A79C2;      /* Azul del logo */
+            --brand-green: #9CCB53;     /* Verde claro del logo */
             
-            /* Colores de fondo y texto */
-            --bg-light: #FAFAFA;        /* Un gris/blanco muy limpio y amigable */
-            --bg-white: #FFFFFF;
-            --text-dark: #2D3748;       /* Un gris oscuro casi negro, más suave para leer */
-            --text-medium: #4A5568;     /* Gris para párrafos */
+            --bg-light: #F9FBFB;        /* Fondo gris/azulado muy tenue y limpio */
+            --bg-white: #FFFFFF;        /* Blanco puro para tarjetas */
             
-            --transition: all 0.3s ease;
+            --text-dark: #2D3748;       /* Gris muy oscuro para buena lectura */
+            --text-medium: #4A5568;     /* Gris suave para párrafos */
+            
+            --transition: all 0.4s ease;
         }
 
         * {
@@ -44,36 +43,48 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Usamos Merriweather para los títulos, da un toque profesional pero cercano */
         h1, h2, h3, h4, .serif {
             font-family: 'Merriweather', serif;
-            color: var(--brand-teal); /* Los títulos en el color principal de tu marca */
+            color: var(--brand-teal);
             font-weight: 700;
         }
 
         /* =========================================
-           BOTONES Y ENLACES (Accesibles y Llamativos)
+           ANIMACIONES DE ENTRADA (ESTILO WEBFLOW)
+           ========================================= */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           BOTONES Y ENLACES
            ========================================= */
         .btn-primary {
             display: inline-block;
             background-color: var(--brand-teal);
             color: #FFF;
-            padding: 16px 32px;
+            padding: 16px 36px;
             text-decoration: none;
             font-size: 1rem;
             font-weight: 600;
-            border-radius: 8px; /* Bordes redondeados = más amigable */
+            border-radius: 8px;
             transition: var(--transition);
             border: 2px solid var(--brand-teal);
             margin-top: 30px;
-            box-shadow: 0 4px 6px rgba(26, 117, 133, 0.2); /* Sombra sutil */
+            box-shadow: 0 4px 10px rgba(26, 117, 133, 0.2);
         }
 
         .btn-primary:hover {
-            background-color: #145d6a; /* Un tono más oscuro al pasar el ratón */
+            background-color: #145d6a;
             border-color: #145d6a;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(26, 117, 133, 0.3);
+            box-shadow: 0 6px 15px rgba(26, 117, 133, 0.3);
             color: #FFF;
         }
 
@@ -81,7 +92,7 @@
            NAVEGACIÓN (HEADER)
            ========================================= */
         header {
-            padding: 15px 5%; /* Más pegado a los bordes */
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -89,19 +100,13 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.95); /* Blanco casi sólido para que el logo se vea perfecto */
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra suave para separar del fondo */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        /* Estilo para tu imagen de logo */
         .logo-image {
-            max-height: 55px; /* Tamaño ideal para que se lean las letras del logo */
+            max-height: 55px; /* Ajusta este valor si tu logo se ve muy grande o pequeño */
             width: auto;
         }
 
@@ -109,30 +114,27 @@
             text-decoration: none;
             color: var(--text-dark);
             font-size: 0.95rem;
-            font-weight: 500;
-            padding: 10px 20px;
+            font-weight: 600;
+            padding: 10px 24px;
             border-radius: 6px;
+            background-color: var(--brand-green);
             transition: var(--transition);
         }
 
-        .nav-link.highlight {
-            background-color: var(--brand-green); /* Usamos el verde claro para el botón del menú */
-            color: var(--text-dark); /* Texto oscuro para que contraste bien con el verde claro */
-        }
-
-        .nav-link.highlight:hover {
+        .nav-link:hover {
             background-color: #8bb847;
+            color: #FFF;
         }
 
         /* =========================================
            SECCIÓN 1: HERO
            ========================================= */
         .hero {
-            min-height: 90vh; /* Un poco menos alto que toda la pantalla */
+            min-height: 90vh;
             display: flex;
             align-items: center;
             padding: 0 5%;
-            padding-top: 100px; /* Espacio para el header fijo */
+            padding-top: 100px;
             position: relative;
             background-color: var(--bg-white);
         }
@@ -147,11 +149,11 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--brand-blue); /* Usamos el azul de la pierna del logo */
+            color: var(--brand-blue);
             margin-bottom: 15px;
             display: inline-block;
             font-weight: 600;
-            background-color: rgba(42, 121, 194, 0.1); /* Fondo azul clarito */
+            background-color: rgba(42, 121, 194, 0.1);
             padding: 5px 15px;
             border-radius: 20px;
         }
@@ -160,11 +162,11 @@
             font-size: 3.2rem;
             line-height: 1.2;
             margin-bottom: 20px;
-            color: var(--text-dark); /* El título en oscuro para máxima lectura */
+            color: var(--text-dark);
         }
-        
+
         .hero h1 span {
-            color: var(--brand-teal); /* Destacamos una palabra con el color de tu marca */
+            color: var(--brand-teal);
         }
 
         .hero p {
@@ -175,7 +177,6 @@
             line-height: 1.6;
         }
 
-        /* Bloque visual de la derecha (Puedes poner una foto tuya o de un niño jugando) */
         .hero-image-container {
             position: absolute;
             right: 5%;
@@ -186,60 +187,408 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            background-color: #f0f0f0; /* Fondo temporal mientras pones foto */
-        }
-        
-        .hero-image-placeholder {
-            width: 100%;
-            height: 100%;
+            background-color: var(--bg-light);
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 2px dashed var(--brand-teal);
+        }
+
+        /* =========================================
+           SECCIÓN 2: EMPATÍA (EL PROBLEMA)
+           ========================================= */
+        .empathy {
+            padding: 100px 5%;
+            text-align: center;
             background-color: var(--brand-teal);
-            color: white;
-            font-size: 1.2rem;
+        }
+
+        .empathy h2 {
+            font-size: 2.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            color: #FFF;
+            line-height: 1.4;
+        }
+
+        .empathy p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* =========================================
+           SECCIÓN 3: SERVICIOS
+           ========================================= */
+        .services {
+            padding: 100px 5%;
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--brand-teal);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            border-top: 5px solid var(--brand-blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-medium);
+            font-size: 1rem;
+        }
+
+        /* =========================================
+           SECCIÓN 4: SOBRE MÍ (AUTORIDAD)
+           ========================================= */
+        .about {
+            display: flex;
+            align-items: center;
+            padding: 100px 5%;
+            background-color: var(--bg-white);
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-medium);
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            flex: 1;
+            height: 450px;
+            background-color: var(--bg-light);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-medium);
+            border: 2px dashed var(--brand-blue);
             text-align: center;
             padding: 20px;
+        }
+
+        /* =========================================
+           SECCIÓN 5: TESTIMONIOS
+           ========================================= */
+        .testimonials {
+            padding: 100px 5%;
+            text-align: center;
+            background-color: rgba(156, 203, 83, 0.1); /* Verde claro muy tenue */
+        }
+
+        .testimonial-block {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-block p.quote {
+            font-size: 1.6rem;
+            font-style: italic;
+            font-family: 'Merriweather', serif;
+            color: var(--brand-teal);
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .testimonial-block p.author {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* =========================================
+           SECCIÓN 6: EL PROCESO
+           ========================================= */
+        .process {
+            padding: 100px 5%;
+            background-color: var(--bg-white);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .step {
+            flex: 1;
+            padding: 40px 30px;
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            position: relative;
+            text-align: center;
+        }
+
+        .step-number {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 3rem;
+            color: var(--brand-green);
+            margin-bottom: 15px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .step h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+        }
+
+        .step p {
+            color: var(--text-medium);
+            font-size: 1rem;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background-color: var(--text-dark);
+            color: #FFF;
+            padding: 60px 5% 30px 5%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-logo {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            color: var(--brand-green);
+        }
+
+        .footer-links a {
+            color: #FFF;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.95rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--brand-green);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         /* =========================================
            RESPONSIVE DESIGN (MÓVILES)
            ========================================= */
         @media (max-width: 992px) {
-            .hero-image-container { display: none; /* Ocultamos la imagen en móviles para dar prioridad al texto */ }
+            .hero-image-container { display: none; }
             .hero-content { max-width: 100%; text-align: center; margin: 0 auto; }
-            .hero { justify-content: center; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero { justify-content: center; padding-top: 120px; }
+            .about { flex-direction: column; text-align: center; }
+            .process-steps { flex-direction: column; }
+            .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+            .footer-links a { margin: 10px; display: inline-block; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER / NAVEGACIÓN -->
+    <!-- HEADER -->
     <header>
         <a href="#" class="logo-container">
-            <!-- AQUÍ VA TU LOGO. Asegúrate de que el archivo 'logo1.png' esté en la misma carpeta que tu archivo HTML -->
-            <img src="logo1.png" alt="Sin Límites TO Logo" class="logo-image">
+            <!-- Asegúrate de tener logo1.png en la misma carpeta -->
+            <img src="logo1.png" alt="Sin Límites TO" class="logo-image">
         </a>
-        <a href="#contacto" class="nav-link highlight">Agendar Cita</a>
+        <a href="#proceso" class="nav-link">Agendar Cita</a>
     </header>
 
     <!-- SECCIÓN 1: HERO -->
     <section class="hero">
-        <div class="hero-content">
-            <span class="hero-label">Terapia Ocupacional en Panamá</span>
+        <div class="hero-content fade-in">
+            <span class="hero-label">Terapia Ocupacional Infantil</span>
             <h1>Ayudamos a tu hijo a alcanzar su <span>máxima independencia</span></h1>
-            <p>Superamos barreras juntos. Ofrecemos terapia ocupacional personalizada para que los niños mejoren su desarrollo, ganen confianza y participen plenamente en su día a día.</p>
-            <a href="#contacto" class="btn-primary">Quiero más información</a>
+            <p>Superamos barreras juntos. Brindamos terapia ocupacional humana y personalizada para que los niños ganen confianza, mejoren sus habilidades y participen plenamente en su día a día.</p>
+            <a href="#proceso" class="btn-primary">Quiero más información</a>
         </div>
-        
-        <!-- Contenedor para una foto tuya trabajando con un niño o de un espacio agradable -->
-        <div class="hero-image-container">
-            <div class="hero-image-placeholder">
-                [Aquí irá una foto profesional tuya trabajando o una imagen cálida de un niño]
+        <div class="hero-image-container fade-in">
+            <p style="color: var(--brand-teal); font-weight: 600;">[Coloca aquí una foto tuya trabajando con un niño]</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: EMPATÍA -->
+    <section class="empathy fade-in">
+        <h2>Sabemos que ver a tu hijo frustrarse con tareas cotidianas es difícil para toda la familia.</h2>
+        <p>No tienes que enfrentar estos retos a solas. Nuestro objetivo no es solo trabajar en sesiones aisladas, sino brindarte herramientas prácticas para que la paz y el equilibrio regresen a tu hogar.</p>
+    </section>
+
+    <!-- SECCIÓN 3: SERVICIOS -->
+    <section class="services">
+        <h2 class="section-title fade-in">Nuestros Programas de Apoyo</h2>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <h3>Integración Sensorial</h3>
+                <p>Ayudamos a tu hijo a procesar mejor los estímulos de su entorno. Reducimos la ansiedad y las crisis emocionales, facilitando su adaptación en la escuela y el hogar.</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Desarrollo de Autonomía</h3>
+                <p>Fomentamos habilidades motoras finas y gruesas para que logren ser independientes en tareas diarias como vestirse, comer, escribir y jugar con confianza.</p>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Acompañamiento a Padres</h3>
+                <p>La terapia no se queda en el consultorio. Te enseñamos estrategias sencillas para adaptar el entorno en casa y seguir estimulando el desarrollo de tu hijo naturalmente.</p>
             </div>
         </div>
     </section>
 
+    <!-- SECCIÓN 4: AUTORIDAD -->
+    <section class="about">
+        <div class="about-text fade-in">
+            <h2>Experiencia, Dedicación y Calidez Humana</h2>
+            <p>Soy la Lic. Claudia Ortega, y mi pasión es ver a los niños superar sus límites. Con años de experiencia en terapia ocupacional infantil, he aprendido que cada niño es único y requiere un plan trazado a su medida.</p>
+            <p>Mi compromiso es trabajar en equipo contigo. Entiendo la dinámica familiar y diseño terapias que sean efectivas para tu hijo y manejables para tu rutina diaria. Juntos, celebraremos cada pequeño gran avance.</p>
+        </div>
+        <div class="about-image fade-in">
+            <p>[Espacio reservado para tu Fotografía Profesional]</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: PRUEBA SOCIAL -->
+    <section class="testimonials fade-in">
+        <div class="testimonial-block">
+            <p class="quote">"Después de meses buscando soluciones, la dedicación de Claudia le devolvió la confianza a nuestro hijo y la tranquilidad a nuestra casa. Sus consejos han sido invaluables."</p>
+            <p class="author">— M.R., Familia residente en Bahía Gorgona</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: EL PROCESO -->
+    <section id="proceso" class="process">
+        <h2 class="section-title fade-in">¿Cómo empezamos a trabajar juntos?</h2>
+        <div class="process-steps">
+            <div class="step fade-in">
+                <span class="step-number">1</span>
+                <h3>Contacto Inicial</h3>
+                <p>Escríbenos para contarnos un poco sobre tu hijo. Agendaremos una llamada breve para entender sus necesidades y explicarte cómo podemos ayudar.</p>
+            </div>
+            <div class="step fade-in">
+                <span class="step-number">2</span>
+                <h3>Evaluación Personalizada</h3>
+                <p>Realizamos una valoración integral y amigable del niño para identificar exactamente qué áreas requieren apoyo y estimulación.</p>
+            </div>
+            <div class="step fade-in">
+                <span class="step-number">3</span>
+                <h3>Plan de Terapia</h3>
+                <p>Iniciamos las sesiones con metas claras y te brindamos acompañamiento constante para asegurar que el progreso se refleje en su día a día.</p>
+            </div>
+        </div>
+        <div class="cta-container fade-in">
+            <a href="#" class="btn-primary">Agendar una Cita de Valoración</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Sin Límites TO</div>
+            <div class="footer-links">
+                <a href="#">Servicios</a>
+                <a href="#">Sobre Mí</a>
+                <a href="#proceso">Contacto</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lic. Claudia Ortega. Terapia Ocupacional. Todos los derechos reservados.</p>
+            <div>
+                <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Políticas de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE ANIMACIÓN -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faders = document.querySelectorAll('.fade-in');
+            
+            const appearOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
 </body>
 </html>

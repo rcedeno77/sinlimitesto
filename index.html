@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sin Límites TO | Terapia Ocupacional por Lic. Claudia Ortega</title>
     
-    <!-- Fuentes de Google: Inter (Lectura clara) y Merriweather (Títulos profesionales y cálidos) -->
+    <!-- Favicon -->
+    <link rel="icon" href="logotipo_2.jpg" type="image/jpeg">
+    
+    <!-- Fuentes de Google: Inter y Merriweather -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
-           VARIABLES DE COLOR (Basadas en tu Logo)
+           VARIABLES DE COLOR 
            ========================================= */
         :root {
-            --brand-teal: #1A7585;      /* Verde azulado principal */
-            --brand-blue: #2A79C2;      /* Azul del logo */
-            --brand-green: #9CCB53;     /* Verde claro del logo */
-            
-            --bg-light: #F9FBFB;        /* Fondo gris/azulado muy tenue y limpio */
-            --bg-white: #FFFFFF;        /* Blanco puro para tarjetas */
-            
-            --text-dark: #2D3748;       /* Gris muy oscuro para buena lectura */
-            --text-medium: #4A5568;     /* Gris suave para párrafos */
-            
+            --brand-teal: #1A7585;      
+            --brand-blue: #2A79C2;      
+            --brand-green: #9CCB53;     
+            --bg-light: #F9FBFB;        
+            --bg-white: #FFFFFF;        
+            --text-dark: #2D3748;       
+            --text-medium: #4A5568;     
             --transition: all 0.4s ease;
         }
 
@@ -50,7 +50,7 @@
         }
 
         /* =========================================
-           ANIMACIONES DE ENTRADA (ESTILO WEBFLOW)
+           ANIMACIONES DE ENTRADA 
            ========================================= */
         .fade-in {
             opacity: 0;
@@ -106,7 +106,7 @@
         }
 
         .logo-image {
-            max-height: 55px; /* Ajusta este valor si tu logo se ve muy grande o pequeño */
+            max-height: 55px; 
             width: auto;
         }
 
@@ -188,10 +188,12 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             background-color: var(--bg-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed var(--brand-teal);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* =========================================
@@ -297,16 +299,17 @@
 
         .about-image {
             flex: 1;
-            height: 450px;
-            background-color: var(--bg-light);
+            height: 500px;
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-medium);
-            border: 2px dashed var(--brand-blue);
-            text-align: center;
-            padding: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
         }
 
         /* =========================================
@@ -315,7 +318,7 @@
         .testimonials {
             padding: 100px 5%;
             text-align: center;
-            background-color: rgba(156, 203, 83, 0.1); /* Verde claro muy tenue */
+            background-color: rgba(156, 203, 83, 0.1); 
         }
 
         .testimonial-block {
@@ -441,6 +444,50 @@
         }
 
         /* =========================================
+           BOTONES FLOTANTES (WhatsApp e Instagram)
+           ========================================= */
+        .floating-social {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .social-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+
+        .btn-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .social-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* =========================================
            RESPONSIVE DESIGN (MÓVILES)
            ========================================= */
         @media (max-width: 992px) {
@@ -452,6 +499,9 @@
             .footer-content { flex-direction: column; gap: 20px; text-align: center; }
             .footer-links a { margin: 10px; display: inline-block; }
             .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+            .floating-social { bottom: 20px; right: 20px; }
+            .social-btn { width: 50px; height: 50px; }
+            .social-btn svg { width: 28px; height: 28px; }
         }
     </style>
 </head>
@@ -460,10 +510,9 @@
     <!-- HEADER -->
     <header>
         <a href="#" class="logo-container">
-            <!-- Asegúrate de tener logo1.png en la misma carpeta -->
             <img src="logo1.png" alt="Sin Límites TO" class="logo-image">
         </a>
-        <a href="#proceso" class="nav-link">Agendar Cita</a>
+        <a href="https://wa.me/50769231108" target="_blank" class="nav-link">Agendar Cita</a>
     </header>
 
     <!-- SECCIÓN 1: HERO -->
@@ -472,10 +521,10 @@
             <span class="hero-label">Terapia Ocupacional Infantil</span>
             <h1>Ayudamos a tu hijo a alcanzar su <span>máxima independencia</span></h1>
             <p>Superamos barreras juntos. Brindamos terapia ocupacional humana y personalizada para que los niños ganen confianza, mejoren sus habilidades y participen plenamente en su día a día.</p>
-            <a href="#proceso" class="btn-primary">Quiero más información</a>
+            <a href="https://wa.me/50769231108" target="_blank" class="btn-primary">Quiero más información</a>
         </div>
         <div class="hero-image-container fade-in">
-            <p style="color: var(--brand-teal); font-weight: 600;">[Coloca aquí una foto tuya trabajando con un niño]</p>
+            <img src="img2.jpg" alt="Terapia Ocupacional Infantil">
         </div>
     </section>
 
@@ -512,7 +561,7 @@
             <p>Mi compromiso es trabajar en equipo contigo. Entiendo la dinámica familiar y diseño terapias que sean efectivas para tu hijo y manejables para tu rutina diaria. Juntos, celebraremos cada pequeño gran avance.</p>
         </div>
         <div class="about-image fade-in">
-            <p>[Espacio reservado para tu Fotografía Profesional]</p>
+            <img src="img1.jpg" alt="Lic. Claudia Ortega - Terapia Ocupacional">
         </div>
     </section>
 
@@ -545,7 +594,7 @@
             </div>
         </div>
         <div class="cta-container fade-in">
-            <a href="#" class="btn-primary">Agendar una Cita de Valoración</a>
+            <a href="https://wa.me/50769231108" target="_blank" class="btn-primary">Agendar una Cita de Valoración</a>
         </div>
     </section>
 
@@ -566,6 +615,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- BOTONES FLOTANTES DE REDES SOCIALES -->
+    <div class="floating-social">
+        <!-- Botón Instagram -->
+        <a href="https://instagram.com/sinlimites_to" target="_blank" class="social-btn btn-instagram" aria-label="Síguenos en Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+            </svg>
+        </a>
+        <!-- Botón WhatsApp -->
+        <a href="https://wa.me/50769231108" target="_blank" class="social-btn btn-whatsapp" aria-label="Escríbenos por WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.1-115-65.1-157.1zM223.9 411.5c-33.1 0-65.5-8.9-94-25.7l-6.7-4-69.8 18.3L72 331.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.9 82.9-184.8 184.8-184.8 49.3 0 95.7 19.2 130.6 54.1 34.9 34.9 54.1 81.3 54.1 130.6 0 102-83 184.9-185 184.9zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-2.1-3.6 2.1-3.5 7.4-14 2.8-5.5 1.4-10.4-1.3-15.9-2.8-5.5-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+        </a>
+    </div>
 
     <!-- SCRIPT DE ANIMACIÓN -->
     <script>

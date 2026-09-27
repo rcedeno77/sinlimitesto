@@ -13,15 +13,15 @@
 
     <style>
         /* =========================================
-            VARIABLES DE COLOR (HIGH-TICKET & EQUILIBRIO)
+            VARIABLES DE COLOR (ARMONÍA Y CALIDEZ PREMIUM)
             ========================================= */
         :root {
             --brand-teal: #1A7585;      
             --brand-teal-dark: #125460;  
             --brand-blue: #2A79C2;      
             --brand-green: #9CCB53;     
-            --brand-orange: #FF6B35;    /* Nuevo acento naranja estratégico */
-            --brand-orange-light: rgba(255, 107, 53, 0.1);
+            --brand-orange: #DF8632;    /* Naranja suave, cálido y equilibrado extraído del logo */
+            --brand-orange-light: rgba(223, 134, 50, 0.08);
             --bg-light: #F4F7F7;     
             --bg-white: #FFFFFF;        
             --text-dark: #2D3748;        
@@ -70,7 +70,7 @@
         }
 
         /* =========================================
-            HEADER (LOGO AMPLIADO Y BALANCE VISUAL)
+            HEADER (LOGO GRANDE, IMOPONENTE Y EQUILIBRADO)
             ========================================= */
         header {
             padding: 10px 5%;
@@ -84,8 +84,8 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(8px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            border-bottom: 2px solid rgba(255, 107, 53, 0.2); /* Toque naranja sutil en el borde */
-            height: 120px; /* Altura aumentada para dar espacio al logo grande */
+            border-bottom: 2px solid rgba(223, 134, 50, 0.15); 
+            height: 135px; /* Altura generosa para acomodar el logo grande */
         }
 
         .logo-container {
@@ -96,7 +96,7 @@
         }
 
         .logo-image {
-            height: 105px; /* Logo significativamente más grande como solicitaste */
+            height: 110px; /* Logotipo grandísimo, con máxima autoridad visual */
             width: auto;
             object-fit: contain;
             mix-blend-mode: multiply; 
@@ -107,7 +107,7 @@
             color: var(--brand-orange);
             font-size: 0.95rem;
             font-weight: 700;
-            padding: 10px 24px;
+            padding: 12px 28px;
             border-radius: 30px;
             border: 2px solid var(--brand-orange);
             background-color: transparent;
@@ -118,7 +118,7 @@
         .header-btn:hover {
             background-color: var(--brand-orange);
             color: #FFF;
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 4px 12px rgba(223, 134, 50, 0.3);
         }
 
         /* =========================================
@@ -128,7 +128,7 @@
             min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 150px 5% 80px 5%; 
+            padding: 160px 5% 80px 5%; /* Padding superior holgado para el nuevo header */
             background-color: var(--bg-white); 
             position: relative; 
         }
@@ -184,7 +184,7 @@
 
         .btn-primary {
             display: inline-block;
-            background-color: var(--brand-orange); /* Botón principal con naranja estratégico para conversión */
+            background-color: var(--brand-orange); /* Naranja cálido y armónico para guiar a la acción */
             color: #FFF;
             padding: 16px 36px; 
             text-decoration: none;
@@ -192,15 +192,15 @@
             font-weight: 700;
             border-radius: 30px;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 4px 15px rgba(223, 134, 50, 0.25);
             font-family: 'Quicksand', sans-serif;
             margin-top: 5px;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 22px rgba(255, 107, 53, 0.45);
-            background-color: #e05a2b;
+            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.4);
+            background-color: #cb7427;
         }
 
         .hero-image-wrapper {
@@ -218,7 +218,7 @@
             border-radius: 30px 30px 30px 80px; 
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             object-fit: cover;
-            border: 3px solid rgba(255, 107, 53, 0.15); /* Marco sutil naranja */
+            border: 3px solid rgba(223, 134, 50, 0.15); 
         }
 
         /* =========================================
@@ -278,7 +278,7 @@
             background-color: var(--bg-white); 
             padding: 35px 25px; 
             border-radius: 18px; 
-            border-top: 5px solid var(--brand-orange); /* Naranja estratégico en tarjetas para equilibrio */
+            border-top: 5px solid var(--brand-orange); 
             box-shadow: 0 8px 25px rgba(0,0,0,0.04);
             transition: all 0.4s ease;
             display: flex;
@@ -287,7 +287,7 @@
 
         .service-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.12); 
+            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.1); 
             border-top-color: var(--brand-teal); 
         }
 
@@ -325,7 +325,7 @@
         }
         .about-text h2 { font-size: 2.3rem; margin-bottom: 20px; }
         .about-text p { margin-bottom: 18px; color: var(--text-medium); font-size: 1.05rem; line-height: 1.7; }
-        .about-text strong { color: var(--brand-orange); font-weight: 700; } /* Destacados en naranja */
+        .about-text strong { color: var(--brand-orange); font-weight: 700; }
 
         .about-image {
             flex: 0.8;
@@ -335,7 +335,7 @@
             overflow: hidden;
             box-shadow: 0 12px 35px rgba(0,0,0,0.1);
             margin: 0 auto; 
-            border: 3px solid rgba(255, 107, 53, 0.2);
+            border: 3px solid rgba(223, 134, 50, 0.2);
         }
         .about-image img { 
             width: 100%; 
@@ -412,7 +412,7 @@
 
         .step:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 25px rgba(255, 107, 53, 0.08);
+            box-shadow: 0 12px 25px rgba(223, 134, 50, 0.08);
             border-top-color: var(--brand-orange);
             background-color: var(--bg-white);
         }
@@ -422,7 +422,7 @@
             font-weight: 700; 
             font-style: italic; 
             font-size: 2.8rem; 
-            color: var(--brand-orange); /* Números en naranja para guiar la vista y vender mejor */
+            color: var(--brand-orange); 
             margin-bottom: 5px; 
             display: block; 
         }
@@ -469,7 +469,7 @@
         .btn-secondary:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            background-color: #e05a2b;
+            background-color: #cb7427;
             color: #FFF;
         }
 
@@ -589,19 +589,19 @@
         }
 
         /* =========================================
-            RESPONSIVE DESIGN (MÓVILES OPTIMIZADO AL 100%)
+            RESPONSIVE DESIGN (MÓVILES OPTIMIZADO)
             ========================================= */
         @media (max-width: 992px) {
             header { 
                 height: 95px; 
                 padding: 5px 4%;
-                border-bottom: 2px solid rgba(255, 107, 53, 0.25); 
+                border-bottom: 2px solid rgba(223, 134, 50, 0.2); 
             }
-            .logo-image { height: 75px; } /* Logo grande y proporcionado también en móviles */
+            .logo-image { height: 75px; } /* Logo grande y perfectamente visible en móviles */
             .header-btn { padding: 8px 16px; font-size: 0.82rem; }
 
             .hero { 
-                padding-top: 125px; 
+                padding-top: 130px; 
                 padding-bottom: 60px;
                 min-height: auto; 
             }

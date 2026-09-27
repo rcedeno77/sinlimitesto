@@ -22,12 +22,12 @@
             --brand-green: #9CCB53;     
             --brand-orange: #DF8632;    
             --brand-orange-light: rgba(223, 134, 50, 0.08); 
-            --bg-light: #F8FAFA; /* Un gris aún más elegante y limpio */    
+            --bg-light: #F8FAFA;    
             --bg-white: #FFFFFF;        
-            --text-dark: #2A313A; /* Gris carbón profundo, más suave para la vista que el negro puro */       
-            --text-medium: #546272; /* Gris medio para textos largos, evita fatiga visual */
+            --text-dark: #2A313A;       
+            --text-medium: #546272; 
             --footer-bg: #1A202C;  
-            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transiciones más fluidas y lujosas */
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
         }
 
         * {
@@ -44,7 +44,7 @@
             background-color: var(--bg-white);
             color: var(--text-dark);
             font-family: 'Nunito', sans-serif;
-            line-height: 1.75; /* INTERLINEADO EDITORIAL: clave para la retención y descanso visual */
+            line-height: 1.75; 
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
@@ -70,7 +70,7 @@
         }
 
         /* =========================================
-            HEADER (EFECTO GLASSMORPHISM TIPO APPLE)
+            HEADER (BLANCO SÓLIDO PARA ELIMINAR EL CUADRO DEL LOGO)
             ========================================= */
         header {
             padding: 10px 5%;
@@ -81,12 +81,11 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.90);
-            backdrop-filter: blur(15px); /* Vidrio esmerilado más fuerte y premium */
-            -webkit-backdrop-filter: blur(15px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            background: #FFFFFF; /* BLANCO PURO: Elimina el choque con el JPG del logo */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
             border-bottom: 1px solid rgba(223, 134, 50, 0.15); 
-            height: 135px; 
+            height: 125px; 
+            transition: all 0.3s ease;
         }
 
         .logo-container {
@@ -97,11 +96,11 @@
         }
 
         .logo-image {
-            height: 110px; 
+            height: 105px; 
             max-width: 400px;
             width: auto;
             object-fit: contain;
-            mix-blend-mode: multiply; 
+            mix-blend-mode: multiply; /* Asegura fusión perfecta */
             transform: scale(1.1); 
             transform-origin: left center;
         }
@@ -113,7 +112,7 @@
             font-weight: 700;
             padding: 12px 28px;
             border-radius: 30px;
-            border: 2px solid rgba(223, 134, 50, 0.5); /* Borde sutil */
+            border: 2px solid rgba(223, 134, 50, 0.5); 
             background-color: transparent;
             transition: var(--transition);
             font-family: 'Quicksand', sans-serif; 
@@ -158,13 +157,13 @@
         .hero-label {
             font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 2.5px; /* Más espacio = más elegancia */
+            letter-spacing: 2.5px; 
             color: var(--brand-orange);
             margin-bottom: 20px;
             display: inline-block;
             font-weight: 700;
-            background: linear-gradient(135deg, rgba(223, 134, 50, 0.12) 0%, rgba(223, 134, 50, 0.03) 100%); /* Fondo degradado suave */
-            border: 1px solid rgba(223, 134, 50, 0.25); /* Borde fino y sofisticado */
+            background: linear-gradient(135deg, rgba(223, 134, 50, 0.12) 0%, rgba(223, 134, 50, 0.03) 100%); 
+            border: 1px solid rgba(223, 134, 50, 0.25); 
             padding: 8px 20px;
             border-radius: 30px;
             font-family: 'Quicksand', sans-serif;
@@ -226,18 +225,17 @@
             max-width: 550px;
             height: auto;
             border-radius: 30px 30px 30px 100px; 
-            box-shadow: 0 25px 50px rgba(26, 117, 133, 0.15); /* Sombra coordinada con la marca */
+            box-shadow: 0 25px 50px rgba(26, 117, 133, 0.15); 
             object-fit: cover;
             border: 1px solid rgba(223, 134, 50, 0.2); 
         }
 
         /* =========================================
-            SECCIÓN 2: EMPATÍA (DEGRADADO 3D PREMIUM)
+            SECCIÓN 2: EMPATÍA
             ========================================= */
         .empathy {
             padding: 90px 5% 80px 5%; 
             text-align: center;
-            /* Degradado de fondo para dar profundidad y textura de lujo */
             background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
             position: relative;
             border-top-left-radius: 60px; 
@@ -275,15 +273,12 @@
 
         .section-title {
             font-size: 2.4rem;
-            text-align: center;
+            text-align: center; /* CENTRADO CORRECTO Y ESTABLE */
             margin-bottom: 50px;
             position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
-        /* Pequeño subrayado decorativo premium bajo el título */
+        /* Subrayado decorativo premium centrado correctamente */
         .section-title::after {
             content: '';
             position: absolute;
@@ -316,7 +311,7 @@
         }
 
         .service-card:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(223, 134, 50, 0.08); 
             border-top-color: var(--brand-teal); 
         }
@@ -631,26 +626,25 @@
             ========================================= */
         @media (max-width: 992px) {
             header { 
-                height: 110px; 
+                height: 105px; 
                 padding: 10px 4%;
-                border-bottom: 1px solid rgba(223, 134, 50, 0.2); 
             }
             .logo-image { 
-                height: 80px; 
-                max-width: 250px;
+                height: 75px; 
+                max-width: 230px;
                 transform: none; 
             } 
             .header-btn { padding: 8px 16px; font-size: 0.85rem; }
 
             .hero { 
-                padding-top: 150px; 
+                padding-top: 140px; 
                 padding-bottom: 60px;
                 min-height: auto; 
             }
             .hero-container { 
                 flex-direction: column; 
                 text-align: center; 
-                gap: 35px; 
+                gap: 30px; 
             }
             
             .hero h1 { 
@@ -669,7 +663,7 @@
             .btn-primary {
                 margin-bottom: 25px; 
                 padding: 16px 32px; 
-                width: 90%; /* Botón atractivo y amplio en móvil */
+                width: 90%; 
             }
 
             .section-title {
@@ -712,8 +706,8 @@
             .footer-links a { margin: 10px 15px; display: inline-block; }
             .footer-logo-img { height: 65px; } 
             
-            .floating-whatsapp { bottom: 20px; right: 20px; width: 55px; height: 55px; }
-            .floating-whatsapp svg { width: 30px; height: 30px; }
+            .floating-whatsapp { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+            .floating-whatsapp svg { width: 28px; height: 28px; }
         }
     </style>
 </head>

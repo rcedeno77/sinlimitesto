@@ -13,20 +13,20 @@
 
     <style>
         /* =========================================
-            VARIABLES DE COLOR (ARMONÍA Y CALIDEZ PREMIUM)
-            ========================================= */
+           VARIABLES DE COLOR (ARMONÍA Y CALIDEZ PREMIUM)
+           ========================================= */
         :root {
             --brand-teal: #1A7585;      
-            --brand-teal-dark: #125460;  
+            --brand-teal-dark: #125460; 
             --brand-blue: #2A79C2;      
             --brand-green: #9CCB53;     
-            --brand-orange: #DF8632;    /* Naranja suave, cálido y equilibrado extraído del logo */
-            --brand-orange-light: rgba(223, 134, 50, 0.08);
+            --brand-orange: #DF8632;    /* Naranja terracota cálido y elegante */
+            --brand-orange-light: rgba(223, 134, 50, 0.08); /* Fondo suave para etiquetas */
             --bg-light: #F4F7F7;     
             --bg-white: #FFFFFF;        
-            --text-dark: #2D3748;        
-            --text-medium: #4A5568;  
-            --footer-bg: #1A202C;  
+            --text-dark: #2D3748;       
+            --text-medium: #4A5568; 
+            --footer-bg: #1A202C; 
             --transition: all 0.3s ease;
         }
 
@@ -57,8 +57,8 @@
         }
 
         /* =========================================
-            ANIMACIONES DE ENTRADA 
-            ========================================= */
+           ANIMACIONES DE ENTRADA 
+           ========================================= */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -70,8 +70,8 @@
         }
 
         /* =========================================
-            HEADER (LOGO GRANDE, IMOPONENTE Y EQUILIBRADO)
-            ========================================= */
+           HEADER (LOGOTIPO GIGANTE Y SIN FRENOS)
+           ========================================= */
         header {
             padding: 10px 5%;
             display: flex;
@@ -85,7 +85,7 @@
             backdrop-filter: blur(8px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             border-bottom: 2px solid rgba(223, 134, 50, 0.15); 
-            height: 135px; /* Altura generosa para acomodar el logo grande */
+            height: 140px; /* Mucho más espacio para que el logo crezca */
         }
 
         .logo-container {
@@ -96,10 +96,13 @@
         }
 
         .logo-image {
-            height: 110px; /* Logotipo grandísimo, con máxima autoridad visual */
+            height: 125px; /* Logotipo masivo y de alta autoridad */
+            max-width: 400px;
             width: auto;
             object-fit: contain;
             mix-blend-mode: multiply; 
+            transform: scale(1.1); /* Ligero zoom extra */
+            transform-origin: left center;
         }
 
         .header-btn {
@@ -118,17 +121,19 @@
         .header-btn:hover {
             background-color: var(--brand-orange);
             color: #FFF;
-            box-shadow: 0 4px 12px rgba(223, 134, 50, 0.3);
+            /* Resplandor elegante premium */
+            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.3);
+            transform: translateY(-2px);
         }
 
         /* =========================================
-            SECCIÓN 1: HERO 
-            ========================================= */
+           SECCIÓN 1: HERO 
+           ========================================= */
         .hero {
             min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 160px 5% 80px 5%; /* Padding superior holgado para el nuevo header */
+            padding: 180px 5% 80px 5%; /* Empujado hacia abajo para el header gigante */
             background-color: var(--bg-white); 
             position: relative; 
         }
@@ -163,8 +168,8 @@
         }
 
         .hero h1 {
-            font-size: 3.0rem;
-            line-height: 1.2; 
+            font-size: 3.2rem;
+            line-height: 1.25; 
             margin-bottom: 20px;
             color: var(--text-dark);
         }
@@ -177,30 +182,31 @@
         .hero p {
             font-size: 1.1rem;
             color: var(--text-medium);
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-weight: 400;
             line-height: 1.6;
         }
 
         .btn-primary {
             display: inline-block;
-            background-color: var(--brand-orange); /* Naranja cálido y armónico para guiar a la acción */
+            background-color: var(--brand-orange); 
             color: #FFF;
-            padding: 16px 36px; 
+            padding: 18px 40px; 
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             border-radius: 30px;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(223, 134, 50, 0.25);
+            /* Sombra difuminada para que no parezca un bloque plano */
+            box-shadow: 0 10px 25px rgba(223, 134, 50, 0.35);
             font-family: 'Quicksand', sans-serif;
             margin-top: 5px;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.4);
-            background-color: #cb7427;
+            box-shadow: 0 12px 30px rgba(223, 134, 50, 0.45);
+            background-color: #c7762a; /* Ligeramente más oscuro en hover */
         }
 
         .hero-image-wrapper {
@@ -222,8 +228,8 @@
         }
 
         /* =========================================
-            SECCIÓN 2: EMPATÍA 
-            ========================================= */
+           SECCIÓN 2: EMPATÍA 
+           ========================================= */
         .empathy {
             padding: 80px 5% 70px 5%; 
             text-align: center;
@@ -253,8 +259,8 @@
         }
 
         /* =========================================
-            SECCIÓN 3: SERVICIOS 
-            ========================================= */
+           SECCIÓN 3: SERVICIOS 
+           ========================================= */
         .services {
             padding: 80px 5%; 
             background-color: var(--bg-light); 
@@ -305,8 +311,8 @@
         }
 
         /* =========================================
-            SECCIÓN 4: SOBRE MÍ 
-            ========================================= */
+           SECCIÓN 4: SOBRE MÍ 
+           ========================================= */
         .about {
             padding: 80px 5%;
             background-color: var(--bg-white);
@@ -346,8 +352,8 @@
         }
 
         /* =========================================
-            SECCIÓN 5: TESTIMONIOS 
-            ========================================= */
+           SECCIÓN 5: TESTIMONIOS 
+           ========================================= */
         .testimonials {
             padding: 80px 5%;
             text-align: center;
@@ -381,8 +387,8 @@
         }
 
         /* =========================================
-            SECCIÓN 6: EL PROCESO 
-            ========================================= */
+           SECCIÓN 6: EL PROCESO 
+           ========================================= */
         .process { 
             padding: 80px 5%; 
             background-color: var(--bg-white); 
@@ -430,8 +436,8 @@
         .step p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.5; }
 
         /* =========================================
-            SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL
-            ========================================= */
+           SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL
+           ========================================= */
         .final-cta {
             padding: 80px 5%;
             text-align: center;
@@ -462,20 +468,20 @@
             font-weight: 700;
             border-radius: 30px;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.35); /* Resplandor premium */
             font-family: 'Quicksand', sans-serif;
         }
 
         .btn-secondary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            background-color: #cb7427;
+            box-shadow: 0 12px 25px rgba(223, 134, 50, 0.45);
+            background-color: #c7762a;
             color: #FFF;
         }
 
         /* =========================================
-            FOOTER 
-            ========================================= */
+           FOOTER 
+           ========================================= */
         footer {
             background-color: var(--footer-bg); 
             color: #A0AEC0; 
@@ -495,12 +501,18 @@
         }
 
         .footer-logo-img {
-            height: 75px; 
+            height: 80px; 
             max-width: 280px;
             width: auto;
             object-fit: contain;
             filter: brightness(0) invert(1);
             opacity: 0.95;
+            transition: var(--transition);
+        }
+
+        .footer-logo-img:hover {
+            opacity: 1;
+            transform: scale(1.02);
         }
 
         .footer-links a {
@@ -558,8 +570,8 @@
         }
 
         /* =========================================
-            BOTÓN FLOTANTE WHATSAPP
-            ========================================= */
+           BOTÓN FLOTANTE WHATSAPP
+           ========================================= */
         .floating-whatsapp {
             position: fixed;
             bottom: 25px;
@@ -589,19 +601,23 @@
         }
 
         /* =========================================
-            RESPONSIVE DESIGN (MÓVILES OPTIMIZADO)
-            ========================================= */
+           RESPONSIVE DESIGN (MÓVILES OPTIMIZADO AL 100%)
+           ========================================= */
         @media (max-width: 992px) {
             header { 
-                height: 95px; 
-                padding: 5px 4%;
+                height: 110px; /* Suficiente espacio en celular */
+                padding: 10px 4%;
                 border-bottom: 2px solid rgba(223, 134, 50, 0.2); 
             }
-            .logo-image { height: 75px; } /* Logo grande y perfectamente visible en móviles */
+            .logo-image { 
+                height: 85px; /* LOGO MUY GRANDE EN CELULAR */
+                max-width: 250px;
+                transform: scale(1.1);
+            } 
             .header-btn { padding: 8px 16px; font-size: 0.82rem; }
 
             .hero { 
-                padding-top: 130px; 
+                padding-top: 140px; 
                 padding-bottom: 60px;
                 min-height: auto; 
             }
@@ -612,14 +628,14 @@
             }
             
             .hero h1 { 
-                font-size: 1.85rem; 
+                font-size: 1.95rem; /* Ajustado para excelente lectura */
                 line-height: 1.25; 
                 margin-bottom: 15px;
             }
             
             .hero p {
-                font-size: 0.98rem;
-                margin-bottom: 20px;
+                font-size: 1rem;
+                margin-bottom: 25px;
             }
 
             .section-title {

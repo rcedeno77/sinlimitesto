@@ -70,7 +70,7 @@
         }
 
         /* =========================================
-            HEADER (BLANCO SÓLIDO PARA ELIMINAR EL CUADRO DEL LOGO)
+            HEADER (GLASSMORPHISM RESTAURADO + LOGO PNG)
             ========================================= */
         header {
             padding: 10px 5%;
@@ -81,8 +81,10 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: #FFFFFF; /* BLANCO PURO: Elimina el choque con el JPG del logo */
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            background: rgba(255, 255, 255, 0.85); /* Semitransparente para el efecto vidrio */
+            backdrop-filter: blur(15px); /* Efecto Glassmorphism Premium */
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             border-bottom: 1px solid rgba(223, 134, 50, 0.15); 
             height: 125px; 
             transition: all 0.3s ease;
@@ -100,9 +102,10 @@
             max-width: 400px;
             width: auto;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Asegura fusión perfecta */
+            /* Ya no hace falta mix-blend-mode si es un PNG transparente real */
             transform: scale(1.1); 
             transform-origin: left center;
+            transition: var(--transition);
         }
 
         .header-btn {
@@ -153,7 +156,6 @@
             max-width: 600px;
         }
 
-        /* ETIQUETA PREMIUM (KICKER) REDISEÑADA */
         .hero-label {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -273,12 +275,11 @@
 
         .section-title {
             font-size: 2.4rem;
-            text-align: center; /* CENTRADO CORRECTO Y ESTABLE */
+            text-align: center;
             margin-bottom: 50px;
             position: relative;
         }
 
-        /* Subrayado decorativo premium centrado correctamente */
         .section-title::after {
             content: '';
             position: absolute;
@@ -310,9 +311,10 @@
             flex-direction: column;
         }
 
+        /* Micro-interacción Premium de 10K: Sombra naranja al pasar el ratón */
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(223, 134, 50, 0.08); 
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 45px rgba(223, 134, 50, 0.15); 
             border-top-color: var(--brand-teal); 
         }
 
@@ -437,7 +439,7 @@
 
         .step:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.06);
+            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.08);
             border-top-color: var(--brand-orange);
             background-color: var(--bg-white);
         }
@@ -714,8 +716,9 @@
 <body>
 
     <header>
+        <!-- ¡Aquí está el llamado a logopng.png para aprovechar el Glassmorphism! -->
         <a href="#inicio" class="logo-container">
-            <img src="logo1.png" alt="Sin Límites TO" class="logo-image">
+            <img src="logopng.png" alt="Sin Límites TO" class="logo-image">
         </a>
         <a href="https://wa.me/50763912665" target="_blank" class="header-btn">Agendar Cita</a>
     </header>
@@ -810,6 +813,7 @@
     <footer>
         <div class="footer-content">
             <a href="#inicio" class="footer-logo-link">
+                <!-- Logotipo PNG también en el Footer para máxima calidad -->
                 <img src="logopng.png" alt="Sin Límites TO" class="footer-logo-img">
             </a>
             <div class="footer-links">

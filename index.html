@@ -70,7 +70,7 @@
         }
 
         /* =========================================
-            HEADER (LOGO LIBERADO Y MAGNÍFICO)
+            HEADER (BLANCO SÓLIDO PARA ELIMINAR EL CUADRO DEL LOGO)
             ========================================= */
         header {
             padding: 10px 5%;
@@ -81,12 +81,10 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.85); 
-            backdrop-filter: blur(15px); 
-            -webkit-backdrop-filter: blur(15px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            background: #FFFFFF; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
             border-bottom: 1px solid rgba(223, 134, 50, 0.15); 
-            height: 140px; /* HEADER MÁS ALTO PARA QUE EL LOGO RESPIRE */
+            height: 125px; 
             transition: all 0.3s ease;
         }
 
@@ -98,11 +96,13 @@
         }
 
         .logo-image {
-            height: 100px; /* ALTURA DEL LOGO IMPONENTE */
+            height: 105px; 
+            max-width: 400px;
             width: auto;
-            /* SE ELIMINA EL MAX-WIDTH PARA QUE CREZCA LO NECESARIO */
             object-fit: contain;
-            transition: var(--transition);
+            mix-blend-mode: multiply; 
+            transform: scale(1.1); 
+            transform-origin: left center;
         }
 
         .header-btn {
@@ -133,7 +133,7 @@
             min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 190px 5% 80px 5%; /* PADDING EXTRA PARA EL HEADER ALTO */
+            padding: 180px 5% 80px 5%; 
             background-color: var(--bg-white); 
             position: relative; 
         }
@@ -153,6 +153,7 @@
             max-width: 600px;
         }
 
+        /* ETIQUETA PREMIUM (KICKER) REDISEÑADA */
         .hero-label {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -182,11 +183,11 @@
         }
 
         .hero p {
-            font-size: 1.15rem; /* Tamaño de fuente óptimo para legibilidad */
+            font-size: 1.12rem;
             color: var(--text-medium);
             margin-bottom: 30px;
             font-weight: 400;
-            line-height: 1.7; /* Interlineado elegante */
+            line-height: 1.8;
         }
 
         .btn-primary {
@@ -272,9 +273,12 @@
 
         .section-title {
             font-size: 2.4rem;
-            text-align: center;
+            text-align: center; 
             margin-bottom: 50px;
             position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .section-title::after {
@@ -626,22 +630,24 @@
             header { 
                 height: 110px; 
                 padding: 10px 4%;
+                border-bottom: 1px solid rgba(223, 134, 50, 0.2); 
             }
             .logo-image { 
-                height: 80px; /* LOGO INMENSO EN CELULAR */
-                width: auto;
+                height: 80px; 
+                max-width: 250px;
+                transform: none; 
             } 
             .header-btn { padding: 8px 16px; font-size: 0.85rem; }
 
             .hero { 
-                padding-top: 140px; 
+                padding-top: 150px; 
                 padding-bottom: 60px;
                 min-height: auto; 
             }
             .hero-container { 
                 flex-direction: column; 
                 text-align: center; 
-                gap: 30px; 
+                gap: 35px; 
             }
             
             .hero h1 { 
@@ -712,7 +718,7 @@
 
     <header>
         <a href="#inicio" class="logo-container">
-            <img src="logopng.png" alt="Sin Límites TO" class="logo-image">
+            <img src="logo1.png" alt="Sin Límites TO" class="logo-image">
         </a>
         <a href="https://wa.me/50763912665" target="_blank" class="header-btn">Agendar Cita</a>
     </header>
@@ -720,10 +726,14 @@
     <section class="hero" id="inicio">
         <div class="hero-container">
             <div class="hero-content fade-in">
+                <!-- ETIQUETA KICKER REDISEÑADA -->
                 <span class="hero-label">Terapia Ocupacional Infantil</span>
-                <!-- NUEVO COPY: DIRECTO Y PERSUASIVO -->
-                <h1>Tu hijo puede superar los retos diarios con <span>confianza y autonomía</span></h1>
-                <p>Acompañamos su ritmo único con estrategias prácticas. Trabajamos contigo para reducir la frustración, potenciar sus habilidades y devolverle la seguridad en cada pequeño paso.</p>
+                
+                <!-- TITULAR INCLUSIVO Y MAGNÉTICO -->
+                <h1>Ayudamos a tus pequeños a superar los retos diarios con <span>confianza e independencia</span></h1>
+                
+                <!-- SUBTÍTULO MEJORADO (EL CÓMO) -->
+                <p>Acompañamos su ritmo único con estrategias prácticas. Trabajamos contigo para reducir la frustración en casa, potenciar sus habilidades y devolverles la seguridad en cada paso.</p>
                 
                 <a href="https://wa.me/50763912665" target="_blank" class="btn-primary">Solicitar una Evaluación Inicial</a>
             </div>
@@ -733,8 +743,9 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE EMPATÍA CON COPY CORREGIDO Y MÁS NATURAL -->
     <section class="empathy fade-in">
-        <h2>Sabemos que ver a tu hijo frustrarse con tareas cotidianas es agotador para toda la familia.</h2>
+        <h2>Sabemos que verlos frustrarse con tareas cotidianas es agotador para toda la familia.</h2>
         <p>No tienes que descifrar estos retos a solas. Nuestro objetivo va más allá del consultorio: te brindamos herramientas prácticas, probadas y sencillas para que la paz, el equilibrio y las sonrisas regresen a tu hogar.</p>
     </section>
 
@@ -743,11 +754,12 @@
         <div class="services-grid">
             <div class="service-card fade-in">
                 <h3>Regulación Sensorial</h3>
-                <p>Ayudamos a tu hijo a procesar mejor los estímulos de su entorno. Nuestro enfoque reduce la sobrecarga y las crisis emocionales, facilitando que disfrute su día a día en casa y en la escuela con mayor calma.</p>
+                <!-- Aquí también reemplazamos 'tu hijo' por 'los pequeños' o 'tus pequeños' -->
+                <p>Ayudamos a tus pequeños a procesar mejor los estímulos de su entorno. Nuestro enfoque reduce la sobrecarga y las crisis emocionales, facilitando que disfruten su día a día en casa y en la escuela con mayor calma.</p>
             </div>
             <div class="service-card fade-in">
                 <h3>Autonomía y Motricidad</h3>
-                <p>Fomentamos el desarrollo de habilidades motoras finas y gruesas. El objetivo es que logre ser independiente en tareas cotidianas—como vestirse, comer o escribir—aumentando su seguridad personal.</p>
+                <p>Fomentamos el desarrollo de habilidades motoras finas y gruesas. El objetivo es que logren ser independientes en tareas cotidianas—como vestirse, comer o escribir—aumentando su seguridad personal.</p>
             </div>
             <div class="service-card fade-in">
                 <h3>Guía para Familias</h3>
@@ -761,7 +773,7 @@
             <div class="about-text fade-in">
                 <h2>Experiencia, Dedicación y Calidez Humana</h2>
                 <p>Soy la <strong>Lic. Claudia Ortega</strong>, y mi pasión es ver a los niños superar sus límites. Con años de experiencia en terapia ocupacional infantil, he aprendido que cada niño es único y requiere un plan trazado exclusivamente a su medida.</p>
-                <p><strong>Mi compromiso es trabajar en equipo contigo.</strong> Entiendo la dinámica familiar y diseño terapias que sean efectivas para tu hijo y manejables para tu rutina diaria. Juntos, celebraremos cada pequeño gran avance.</p>
+                <p><strong>Mi compromiso es trabajar en equipo contigo.</strong> Entiendo la dinámica familiar y diseño terapias que sean efectivas para los pequeños y manejables para tu rutina diaria. Juntos, celebraremos cada pequeño gran avance.</p>
             </div>
             <div class="about-image fade-in">
                 <img src="img02.jpg" alt="Lic. Claudia Ortega - Terapia Ocupacional">
@@ -771,7 +783,7 @@
 
     <section class="testimonials fade-in">
         <div class="testimonial-block">
-            <p class="quote">"Después de meses buscando soluciones, la dedicación de Claudia le devolvió la confianza a nuestro hijo y la tranquilidad a nuestra casa. Sus consejos han sido invaluables."</p>
+            <p class="quote">"Después de meses buscando soluciones, la dedicación de Claudia les devolvió la confianza a nuestros niños y la tranquilidad a nuestra casa. Sus consejos han sido invaluables."</p>
             <p class="author">— M.R., Familia residente en Bahía Gorgona</p>
         </div>
     </section>
@@ -783,7 +795,7 @@
                 <div class="step fade-in">
                     <span class="step-number">1</span>
                     <h3>Contacto Inicial</h3>
-                    <p>Escríbenos para contarnos sobre tu pequeño. Agendaremos una llamada para entender sus necesidades y explicarte el proceso.</p>
+                    <p>Escríbenos para contarnos sobre tus pequeños. Agendaremos una llamada para entender sus necesidades y explicarte el proceso.</p>
                 </div>
                 <div class="step fade-in">
                     <span class="step-number">2</span>
@@ -800,7 +812,7 @@
     </section>
 
     <section class="final-cta fade-in" id="contacto">
-        <h2>Da el primer paso hacia el bienestar de tu hijo</h2>
+        <h2>Da el primer paso hacia el bienestar de tus pequeños</h2>
         <p>Agenda una consulta de valoración y comencemos a trazar el mejor camino para su desarrollo.</p>
         <a href="https://wa.me/50763912665" target="_blank" class="btn-secondary">Agendar una Cita de Valoración</a>
     </section>

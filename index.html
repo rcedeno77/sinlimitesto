@@ -13,20 +13,20 @@
 
     <style>
         /* =========================================
-           VARIABLES DE COLOR (ARMONÍA Y CALIDEZ PREMIUM)
-           ========================================= */
+            VARIABLES DE COLOR (ARMONÍA Y CALIDEZ PREMIUM)
+            ========================================= */
         :root {
             --brand-teal: #1A7585;      
-            --brand-teal-dark: #125460; 
+            --brand-teal-dark: #125460;  
             --brand-blue: #2A79C2;      
             --brand-green: #9CCB53;     
-            --brand-orange: #DF8632;    /* Naranja terracota cálido y elegante */
-            --brand-orange-light: rgba(223, 134, 50, 0.08); /* Fondo suave para etiquetas */
+            --brand-orange: #DF8632;    
+            --brand-orange-light: rgba(223, 134, 50, 0.08); 
             --bg-light: #F4F7F7;     
             --bg-white: #FFFFFF;        
-            --text-dark: #2D3748;       
-            --text-medium: #4A5568; 
-            --footer-bg: #1A202C; 
+            --text-dark: #2D3748;        
+            --text-medium: #4A5568;  
+            --footer-bg: #1A202C;  
             --transition: all 0.3s ease;
         }
 
@@ -57,8 +57,8 @@
         }
 
         /* =========================================
-           ANIMACIONES DE ENTRADA 
-           ========================================= */
+            ANIMACIONES DE ENTRADA 
+            ========================================= */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -70,8 +70,8 @@
         }
 
         /* =========================================
-           HEADER (LOGOTIPO GIGANTE Y SIN FRENOS)
-           ========================================= */
+            HEADER (LOGO GRANDE, IMOPONENTE Y EQUILIBRADO)
+            ========================================= */
         header {
             padding: 10px 5%;
             display: flex;
@@ -85,7 +85,7 @@
             backdrop-filter: blur(8px);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             border-bottom: 2px solid rgba(223, 134, 50, 0.15); 
-            height: 140px; /* Mucho más espacio para que el logo crezca */
+            height: 135px; 
         }
 
         .logo-container {
@@ -96,12 +96,12 @@
         }
 
         .logo-image {
-            height: 125px; /* Logotipo masivo y de alta autoridad */
+            height: 110px; 
             max-width: 400px;
             width: auto;
             object-fit: contain;
             mix-blend-mode: multiply; 
-            transform: scale(1.1); /* Ligero zoom extra */
+            transform: scale(1.1); 
             transform-origin: left center;
         }
 
@@ -121,19 +121,18 @@
         .header-btn:hover {
             background-color: var(--brand-orange);
             color: #FFF;
-            /* Resplandor elegante premium */
             box-shadow: 0 8px 20px rgba(223, 134, 50, 0.3);
             transform: translateY(-2px);
         }
 
         /* =========================================
-           SECCIÓN 1: HERO 
-           ========================================= */
+            SECCIÓN 1: HERO 
+            ========================================= */
         .hero {
             min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 180px 5% 80px 5%; /* Empujado hacia abajo para el header gigante */
+            padding: 180px 5% 80px 5%; 
             background-color: var(--bg-white); 
             position: relative; 
         }
@@ -197,16 +196,16 @@
             font-weight: 700;
             border-radius: 30px;
             transition: var(--transition);
-            /* Sombra difuminada para que no parezca un bloque plano */
             box-shadow: 0 10px 25px rgba(223, 134, 50, 0.35);
             font-family: 'Quicksand', sans-serif;
             margin-top: 5px;
+            margin-bottom: 20px; /* Asegura espacio vital debajo del botón */
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(223, 134, 50, 0.45);
-            background-color: #c7762a; /* Ligeramente más oscuro en hover */
+            background-color: #c7762a; 
         }
 
         .hero-image-wrapper {
@@ -228,8 +227,8 @@
         }
 
         /* =========================================
-           SECCIÓN 2: EMPATÍA 
-           ========================================= */
+            SECCIÓN 2: EMPATÍA 
+            ========================================= */
         .empathy {
             padding: 80px 5% 70px 5%; 
             text-align: center;
@@ -259,8 +258,8 @@
         }
 
         /* =========================================
-           SECCIÓN 3: SERVICIOS 
-           ========================================= */
+            SECCIÓN 3: SERVICIOS 
+            ========================================= */
         .services {
             padding: 80px 5%; 
             background-color: var(--bg-light); 
@@ -311,8 +310,8 @@
         }
 
         /* =========================================
-           SECCIÓN 4: SOBRE MÍ 
-           ========================================= */
+            SECCIÓN 4: SOBRE MÍ 
+            ========================================= */
         .about {
             padding: 80px 5%;
             background-color: var(--bg-white);
@@ -352,8 +351,8 @@
         }
 
         /* =========================================
-           SECCIÓN 5: TESTIMONIOS 
-           ========================================= */
+            SECCIÓN 5: TESTIMONIOS 
+            ========================================= */
         .testimonials {
             padding: 80px 5%;
             text-align: center;
@@ -387,8 +386,8 @@
         }
 
         /* =========================================
-           SECCIÓN 6: EL PROCESO 
-           ========================================= */
+            SECCIÓN 6: EL PROCESO 
+            ========================================= */
         .process { 
             padding: 80px 5%; 
             background-color: var(--bg-white); 
@@ -436,8 +435,8 @@
         .step p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.5; }
 
         /* =========================================
-           SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL
-           ========================================= */
+            SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL
+            ========================================= */
         .final-cta {
             padding: 80px 5%;
             text-align: center;
@@ -468,7 +467,7 @@
             font-weight: 700;
             border-radius: 30px;
             transition: var(--transition);
-            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.35); /* Resplandor premium */
+            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.35); 
             font-family: 'Quicksand', sans-serif;
         }
 
@@ -480,8 +479,8 @@
         }
 
         /* =========================================
-           FOOTER 
-           ========================================= */
+            FOOTER 
+            ========================================= */
         footer {
             background-color: var(--footer-bg); 
             color: #A0AEC0; 
@@ -501,18 +500,12 @@
         }
 
         .footer-logo-img {
-            height: 80px; 
+            height: 75px; 
             max-width: 280px;
             width: auto;
             object-fit: contain;
             filter: brightness(0) invert(1);
             opacity: 0.95;
-            transition: var(--transition);
-        }
-
-        .footer-logo-img:hover {
-            opacity: 1;
-            transform: scale(1.02);
         }
 
         .footer-links a {
@@ -570,8 +563,8 @@
         }
 
         /* =========================================
-           BOTÓN FLOTANTE WHATSAPP
-           ========================================= */
+            BOTÓN FLOTANTE WHATSAPP
+            ========================================= */
         .floating-whatsapp {
             position: fixed;
             bottom: 25px;
@@ -601,18 +594,18 @@
         }
 
         /* =========================================
-           RESPONSIVE DESIGN (MÓVILES OPTIMIZADO AL 100%)
-           ========================================= */
+            RESPONSIVE DESIGN (MÓVILES OPTIMIZADO AL 100%)
+            ========================================= */
         @media (max-width: 992px) {
             header { 
-                height: 110px; /* Suficiente espacio en celular */
+                height: 110px; 
                 padding: 10px 4%;
                 border-bottom: 2px solid rgba(223, 134, 50, 0.2); 
             }
             .logo-image { 
-                height: 85px; /* LOGO MUY GRANDE EN CELULAR */
-                max-width: 250px;
-                transform: scale(1.1);
+                height: 75px; /* LOGO MÁS RECOGIDO PARA EVITAR QUE TOQUE LOS BORDES */
+                max-width: 200px;
+                transform: none; /* Quitamos el scale en móvil para mayor nitidez */
             } 
             .header-btn { padding: 8px 16px; font-size: 0.82rem; }
 
@@ -624,18 +617,24 @@
             .hero-container { 
                 flex-direction: column; 
                 text-align: center; 
-                gap: 25px;
+                gap: 35px; /* Aumentamos el gap general para separar el botón de la imagen */
             }
             
             .hero h1 { 
-                font-size: 1.95rem; /* Ajustado para excelente lectura */
+                font-size: 1.85rem; 
                 line-height: 1.25; 
                 margin-bottom: 15px;
             }
             
             .hero p {
-                font-size: 1rem;
-                margin-bottom: 25px;
+                font-size: 0.95rem; /* Texto más ligero en celular */
+                line-height: 1.5;
+                margin-bottom: 25px; /* Separación clara antes del botón */
+            }
+
+            .btn-primary {
+                margin-bottom: 20px; /* Margen vital para que el botón no colisione con la imagen */
+                padding: 14px 30px; /* Ligeramente más compacto en móvil */
             }
 
             .section-title {
@@ -655,7 +654,7 @@
                 font-size: 1.7rem;
             }
 
-            .hero-image-wrapper { justify-content: center; margin-top: 10px; }
+            .hero-image-wrapper { justify-content: center; margin-top: 15px; }
             .hero-image-wrapper img { border-radius: 20px; max-width: 95%; }
             
             .empathy { 
@@ -689,7 +688,7 @@
         <a href="#inicio" class="logo-container">
             <img src="logo1.png" alt="Sin Límites TO" class="logo-image">
         </a>
-        <a href="https://wa.me/50769231108" target="_blank" class="header-btn">Agendar Cita</a>
+        <a href="https://wa.me/50763912665" target="_blank" class="header-btn">Agendar Cita</a>
     </header>
 
     <section class="hero" id="inicio">

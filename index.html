@@ -9,7 +9,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
@@ -22,12 +22,12 @@
             --brand-green: #9CCB53;     
             --brand-orange: #DF8632;    
             --brand-orange-light: rgba(223, 134, 50, 0.08); 
-            --bg-light: #F4F7F7;     
+            --bg-light: #F8FAFA; /* Un gris aún más elegante y limpio */    
             --bg-white: #FFFFFF;        
-            --text-dark: #2D3748;        
-            --text-medium: #4A5568;  
+            --text-dark: #2A313A; /* Gris carbón profundo, más suave para la vista que el negro puro */       
+            --text-medium: #546272; /* Gris medio para textos largos, evita fatiga visual */
             --footer-bg: #1A202C;  
-            --transition: all 0.3s ease;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transiciones más fluidas y lujosas */
         }
 
         * {
@@ -44,7 +44,7 @@
             background-color: var(--bg-white);
             color: var(--text-dark);
             font-family: 'Nunito', sans-serif;
-            line-height: 1.6;
+            line-height: 1.75; /* INTERLINEADO EDITORIAL: clave para la retención y descanso visual */
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
@@ -61,8 +61,8 @@
             ========================================= */
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         .fade-in.visible {
             opacity: 1;
@@ -70,7 +70,7 @@
         }
 
         /* =========================================
-            HEADER (LOGO GRANDE, IMOPONENTE Y EQUILIBRADO)
+            HEADER (EFECTO GLASSMORPHISM TIPO APPLE)
             ========================================= */
         header {
             padding: 10px 5%;
@@ -81,10 +81,11 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            border-bottom: 2px solid rgba(223, 134, 50, 0.15); 
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(15px); /* Vidrio esmerilado más fuerte y premium */
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border-bottom: 1px solid rgba(223, 134, 50, 0.15); 
             height: 135px; 
         }
 
@@ -112,7 +113,7 @@
             font-weight: 700;
             padding: 12px 28px;
             border-radius: 30px;
-            border: 2px solid var(--brand-orange);
+            border: 2px solid rgba(223, 134, 50, 0.5); /* Borde sutil */
             background-color: transparent;
             transition: var(--transition);
             font-family: 'Quicksand', sans-serif; 
@@ -121,7 +122,8 @@
         .header-btn:hover {
             background-color: var(--brand-orange);
             color: #FFF;
-            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.3);
+            border-color: var(--brand-orange);
+            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.25);
             transform: translateY(-2px);
         }
 
@@ -152,18 +154,21 @@
             max-width: 600px;
         }
 
+        /* ETIQUETA PREMIUM (KICKER) REDISEÑADA */
         .hero-label {
             font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px; /* Más espacio = más elegancia */
             color: var(--brand-orange);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: inline-block;
             font-weight: 700;
-            background-color: var(--brand-orange-light);
-            padding: 6px 16px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(223, 134, 50, 0.12) 0%, rgba(223, 134, 50, 0.03) 100%); /* Fondo degradado suave */
+            border: 1px solid rgba(223, 134, 50, 0.25); /* Borde fino y sofisticado */
+            padding: 8px 20px;
+            border-radius: 30px;
             font-family: 'Quicksand', sans-serif;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
         }
 
         .hero h1 {
@@ -179,11 +184,11 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.12rem;
             color: var(--text-medium);
             margin-bottom: 30px;
             font-weight: 400;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         .btn-primary {
@@ -196,15 +201,15 @@
             font-weight: 700;
             border-radius: 30px;
             transition: var(--transition);
-            box-shadow: 0 10px 25px rgba(223, 134, 50, 0.35);
+            box-shadow: 0 10px 25px rgba(223, 134, 50, 0.3);
             font-family: 'Quicksand', sans-serif;
             margin-top: 5px;
-            margin-bottom: 20px; /* Asegura espacio vital debajo del botón */
+            margin-bottom: 20px; 
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(223, 134, 50, 0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(223, 134, 50, 0.4);
             background-color: #c7762a; 
         }
 
@@ -220,100 +225,120 @@
             width: 100%;
             max-width: 550px;
             height: auto;
-            border-radius: 30px 30px 30px 80px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-radius: 30px 30px 30px 100px; 
+            box-shadow: 0 25px 50px rgba(26, 117, 133, 0.15); /* Sombra coordinada con la marca */
             object-fit: cover;
-            border: 3px solid rgba(223, 134, 50, 0.15); 
+            border: 1px solid rgba(223, 134, 50, 0.2); 
         }
 
         /* =========================================
-            SECCIÓN 2: EMPATÍA 
+            SECCIÓN 2: EMPATÍA (DEGRADADO 3D PREMIUM)
             ========================================= */
         .empathy {
-            padding: 80px 5% 70px 5%; 
+            padding: 90px 5% 80px 5%; 
             text-align: center;
-            background-color: var(--brand-teal);
+            /* Degradado de fondo para dar profundidad y textura de lujo */
+            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
             position: relative;
-            border-top-left-radius: 50px; 
-            border-top-right-radius: 50px;
+            border-top-left-radius: 60px; 
+            border-top-right-radius: 60px;
             margin-top: -40px; 
             z-index: 10; 
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
         }
 
         .empathy h2 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             max-width: 850px;
             margin: 0 auto 20px auto;
             color: #FFF;
-            line-height: 1.3;
+            line-height: 1.35;
+            font-weight: 600;
         }
 
         .empathy p {
-            font-size: 1.1rem;
-            max-width: 650px;
+            font-size: 1.15rem;
+            max-width: 700px;
             margin: 0 auto;
-            color: rgba(255, 255, 255, 0.92);
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 300;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         /* =========================================
             SECCIÓN 3: SERVICIOS 
             ========================================= */
         .services {
-            padding: 80px 5%; 
+            padding: 100px 5% 90px 5%; 
             background-color: var(--bg-light); 
         }
 
         .section-title {
-            font-size: 2.3rem;
+            font-size: 2.4rem;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Pequeño subrayado decorativo premium bajo el título */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--brand-orange);
+            border-radius: 5px;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px; 
+            gap: 30px; 
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .service-card {
             background-color: var(--bg-white); 
-            padding: 35px 25px; 
-            border-radius: 18px; 
-            border-top: 5px solid var(--brand-orange); 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-            transition: all 0.4s ease;
+            padding: 45px 35px; 
+            border-radius: 24px; 
+            border-top: 4px solid var(--brand-orange); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: var(--transition);
             display: flex;
             flex-direction: column;
         }
 
         .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.1); 
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(223, 134, 50, 0.08); 
             border-top-color: var(--brand-teal); 
         }
 
         .service-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 12px;
-            color: var(--text-dark);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--brand-teal-dark);
             line-height: 1.3;
         }
 
         .service-card p {
             color: var(--text-medium);
-            font-size: 0.98rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* =========================================
             SECCIÓN 4: SOBRE MÍ 
             ========================================= */
         .about {
-            padding: 80px 5%;
+            padding: 100px 5%;
             background-color: var(--bg-white);
         }
 
@@ -322,25 +347,25 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            gap: 45px;
+            gap: 60px;
         }
 
         .about-text { 
             flex: 1.2; 
         }
-        .about-text h2 { font-size: 2.3rem; margin-bottom: 20px; }
-        .about-text p { margin-bottom: 18px; color: var(--text-medium); font-size: 1.05rem; line-height: 1.7; }
+        .about-text h2 { font-size: 2.4rem; margin-bottom: 25px; }
+        .about-text p { margin-bottom: 20px; color: var(--text-medium); font-size: 1.1rem; line-height: 1.8; }
         .about-text strong { color: var(--brand-orange); font-weight: 700; }
 
         .about-image {
             flex: 0.8;
-            max-width: 380px; 
-            height: 500px; 
-            border-radius: 80px 20px 20px 20px;
+            max-width: 400px; 
+            height: 520px; 
+            border-radius: 120px 20px 20px 20px;
             overflow: hidden;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
             margin: 0 auto; 
-            border: 3px solid rgba(223, 134, 50, 0.2);
+            border: 1px solid rgba(223, 134, 50, 0.15);
         }
         .about-image img { 
             width: 100%; 
@@ -354,13 +379,13 @@
             SECCIÓN 5: TESTIMONIOS 
             ========================================= */
         .testimonials {
-            padding: 80px 5%;
+            padding: 90px 5%;
             text-align: center;
             background-color: var(--bg-light); 
             position: relative;
             overflow: hidden;
-            border-top: 1px solid rgba(0,0,0,0.03);
-            border-bottom: 1px solid rgba(0,0,0,0.03);
+            border-top: 1px solid rgba(0,0,0,0.02);
+            border-bottom: 1px solid rgba(0,0,0,0.02);
         }
         
         .testimonial-block { 
@@ -370,26 +395,26 @@
             z-index: 1;
         }
         .testimonial-block p.quote { 
-            font-size: 1.5rem; 
+            font-size: 1.6rem; 
             font-style: italic; 
-            margin-bottom: 20px; 
-            line-height: 1.4; 
+            margin-bottom: 25px; 
+            line-height: 1.6; 
             color: var(--brand-teal-dark);
             font-family: 'Nunito', sans-serif; 
         }
         .testimonial-block p.author { 
-            font-size: 0.9rem; 
+            font-size: 0.95rem; 
             font-weight: 700; 
-            color: var(--text-dark);
+            color: var(--brand-orange);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         /* =========================================
             SECCIÓN 6: EL PROCESO 
             ========================================= */
         .process { 
-            padding: 80px 5%; 
+            padding: 100px 5%; 
             background-color: var(--bg-white); 
         }
         
@@ -401,23 +426,23 @@
         .process-steps { 
             display: flex; 
             justify-content: space-between; 
-            gap: 25px; 
-            margin-top: 40px; 
+            gap: 30px; 
+            margin-top: 60px; 
         }
         
         .step { 
             flex: 1; 
-            padding: 30px 20px; 
+            padding: 40px 30px; 
             background-color: var(--bg-light); 
-            border-radius: 18px; 
+            border-radius: 24px; 
             text-align: center;
             transition: var(--transition);
             border-top: 4px solid transparent;
         }
 
         .step:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 25px rgba(223, 134, 50, 0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.06);
             border-top-color: var(--brand-orange);
             background-color: var(--bg-white);
         }
@@ -426,33 +451,34 @@
             font-family: 'Quicksand', sans-serif; 
             font-weight: 700; 
             font-style: italic; 
-            font-size: 2.8rem; 
+            font-size: 3.5rem; 
             color: var(--brand-orange); 
-            margin-bottom: 5px; 
+            margin-bottom: 10px; 
             display: block; 
+            opacity: 0.9;
         }
-        .step h3 { margin-bottom: 12px; font-size: 1.2rem; color: var(--brand-teal); }
-        .step p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.5; }
+        .step h3 { margin-bottom: 15px; font-size: 1.3rem; color: var(--brand-teal-dark); }
+        .step p { color: var(--text-medium); font-size: 1rem; line-height: 1.6; }
 
         /* =========================================
             SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL
             ========================================= */
         .final-cta {
-            padding: 80px 5%;
+            padding: 100px 5%;
             text-align: center;
-            background-color: var(--brand-teal); 
+            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
             color: #FFF;
         }
         
         .final-cta h2 {
             color: #FFF;
-            font-size: 2.2rem;
-            margin-bottom: 12px;
+            font-size: 2.6rem;
+            margin-bottom: 15px;
         }
         
         .final-cta p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+            font-size: 1.15rem;
+            margin-bottom: 40px;
             font-weight: 400;
             color: rgba(255, 255, 255, 0.9);
         }
@@ -461,19 +487,19 @@
             display: inline-block;
             background-color: var(--brand-orange); 
             color: #FFF;
-            padding: 16px 40px; 
+            padding: 18px 45px; 
             text-decoration: none;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 700;
             border-radius: 30px;
             transition: var(--transition);
-            box-shadow: 0 8px 20px rgba(223, 134, 50, 0.35); 
+            box-shadow: 0 10px 25px rgba(223, 134, 50, 0.35); 
             font-family: 'Quicksand', sans-serif;
         }
 
         .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(223, 134, 50, 0.45);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.45);
             background-color: #c7762a;
             color: #FFF;
         }
@@ -484,7 +510,7 @@
         footer {
             background-color: var(--footer-bg); 
             color: #A0AEC0; 
-            padding: 50px 5% 25px 5%;
+            padding: 60px 5% 30px 5%;
         }
 
         .footer-content {
@@ -492,27 +518,33 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding-bottom: 25px;
-            margin-bottom: 25px;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .footer-logo-img {
-            height: 75px; 
+            height: 80px; 
             max-width: 280px;
             width: auto;
             object-fit: contain;
             filter: brightness(0) invert(1);
             opacity: 0.95;
+            transition: var(--transition);
+        }
+
+        .footer-logo-img:hover {
+            opacity: 1;
+            transform: scale(1.03);
         }
 
         .footer-links a {
             color: #A0AEC0;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 0.9rem;
+            margin-left: 30px;
+            font-size: 0.95rem;
             transition: var(--transition);
             font-weight: 600;
             font-family: 'Quicksand', sans-serif; 
@@ -528,35 +560,36 @@
         }
 
         .footer-bottom p {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 300;
         }
 
         .footer-social-icons {
             display: flex;
-            gap: 12px;
+            gap: 15px;
         }
 
         .footer-social-icons a {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background-color: rgba(255,255,255,0.05);
             transition: var(--transition);
         }
 
         .footer-social-icons svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             fill: #A0AEC0;
             transition: var(--transition);
         }
 
         .footer-social-icons a:hover {
             background-color: var(--brand-orange);
+            transform: translateY(-2px);
         }
         .footer-social-icons a:hover svg {
             fill: #FFF;
@@ -567,29 +600,29 @@
             ========================================= */
         .floating-whatsapp {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 55px;
-            height: 55px;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
             background-color: #25D366;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
             transition: var(--transition);
             z-index: 1000;
             text-decoration: none;
         }
 
         .floating-whatsapp:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
         }
 
         .floating-whatsapp svg {
-            width: 32px;
-            height: 32px;
+            width: 35px;
+            height: 35px;
             fill: white;
         }
 
@@ -600,85 +633,87 @@
             header { 
                 height: 110px; 
                 padding: 10px 4%;
-                border-bottom: 2px solid rgba(223, 134, 50, 0.2); 
+                border-bottom: 1px solid rgba(223, 134, 50, 0.2); 
             }
             .logo-image { 
-                height: 75px; /* LOGO MÁS RECOGIDO PARA EVITAR QUE TOQUE LOS BORDES */
-                max-width: 200px;
-                transform: none; /* Quitamos el scale en móvil para mayor nitidez */
+                height: 80px; 
+                max-width: 250px;
+                transform: none; 
             } 
-            .header-btn { padding: 8px 16px; font-size: 0.82rem; }
+            .header-btn { padding: 8px 16px; font-size: 0.85rem; }
 
             .hero { 
-                padding-top: 140px; 
+                padding-top: 150px; 
                 padding-bottom: 60px;
                 min-height: auto; 
             }
             .hero-container { 
                 flex-direction: column; 
                 text-align: center; 
-                gap: 35px; /* Aumentamos el gap general para separar el botón de la imagen */
+                gap: 35px; 
             }
             
             .hero h1 { 
-                font-size: 1.85rem; 
-                line-height: 1.25; 
+                font-size: 2.1rem; 
+                line-height: 1.3; 
                 margin-bottom: 15px;
             }
             
             .hero p {
-                font-size: 0.95rem; /* Texto más ligero en celular */
-                line-height: 1.5;
-                margin-bottom: 25px; /* Separación clara antes del botón */
+                font-size: 1.05rem; 
+                line-height: 1.6;
+                margin-bottom: 30px; 
+                padding: 0 10px;
             }
 
             .btn-primary {
-                margin-bottom: 20px; /* Margen vital para que el botón no colisione con la imagen */
-                padding: 14px 30px; /* Ligeramente más compacto en móvil */
+                margin-bottom: 25px; 
+                padding: 16px 32px; 
+                width: 90%; /* Botón atractivo y amplio en móvil */
             }
 
             .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 30px;
+                font-size: 1.9rem;
+                margin-bottom: 40px;
             }
 
             .empathy h2 {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
             }
 
             .about-text h2 {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
             }
 
             .final-cta h2 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
 
             .hero-image-wrapper { justify-content: center; margin-top: 15px; }
             .hero-image-wrapper img { border-radius: 20px; max-width: 95%; }
             
             .empathy { 
-                border-top-left-radius: 30px; 
-                border-top-right-radius: 30px; 
-                margin-top: -30px; 
-                padding: 60px 5%;
+                border-top-left-radius: 40px; 
+                border-top-right-radius: 40px; 
+                margin-top: -35px; 
+                padding: 70px 5%;
             }
             
-            .about-container { flex-direction: column; text-align: center; gap: 30px; }
+            .about-container { flex-direction: column; text-align: center; gap: 40px; }
             .about-image { height: 420px; width: 100%; max-width: 320px; }
             
             .process-steps { flex-direction: column; gap: 20px; }
             
             .footer-content, .footer-bottom { 
                 flex-direction: column; 
-                gap: 20px; 
+                gap: 25px; 
                 text-align: center; 
             }
-            .footer-links a { margin: 8px 12px; display: inline-block; }
-            .footer-logo-img { height: 60px; } 
+            .footer-links a { margin: 10px 15px; display: inline-block; }
+            .footer-logo-img { height: 65px; } 
             
-            .floating-whatsapp { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-            .floating-whatsapp svg { width: 28px; height: 28px; }
+            .floating-whatsapp { bottom: 20px; right: 20px; width: 55px; height: 55px; }
+            .floating-whatsapp svg { width: 30px; height: 30px; }
         }
     </style>
 </head>

@@ -3,10 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sin Límites TO | Terapia Ocupacional por Lic. Claudia Ortega</title>
     
+    <!-- =========================================
+         SEO TÉCNICO Y ON-PAGE PREMIUM
+         ========================================= -->
+    <!-- Título optimizado para CTR y Posicionamiento Local -->
+    <title>Terapia Ocupacional Infantil en Panamá | Sin Límites TO - Lic. Claudia Ortega</title>
+    
+    <!-- Meta Descripción magnética con palabras clave exactas -->
+    <meta name="description" content="¿Buscas los mejores terapeutas ocupacionales en Panamá? En Sin Límites TO ayudamos a tus hijos a superar retos diarios con regulación sensorial y motricidad. Agenda tu cita con la Lic. Claudia Ortega.">
+    
+    <!-- Keywords (Apoyo semántico) -->
+    <meta name="keywords" content="terapia ocupacional en panama, terapeutas ocupacionales en panama, terapeutas para mi hijo, mejores terapeutas ocupacionales de panama, terapia sensorial panama, clinica de terapia ocupacional, Lic. Claudia Ortega">
+    
+    <!-- Autor y Localización -->
+    <meta name="author" content="Lic. Claudia Ortega">
+    <meta name="geo.region" content="PA-8">
+    <meta name="geo.placename" content="Ciudad de Panamá">
+    
+    <!-- Open Graph / SEO Social (Para que se vea premium al compartir en WhatsApp/Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Terapia Ocupacional Infantil en Panamá | Sin Límites TO">
+    <meta property="og:description" content="Ayudamos a tus pequeños a superar los retos diarios con confianza e independencia. Estrategias prácticas para toda la familia.">
+    <meta property="og:image" content="logopng.png">
+    
+    <!-- Marcado de Datos Estructurados (Schema Markup para Google Local SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Sin Límites TO | Terapia Ocupacional Infantil",
+      "image": "logopng.png",
+      "description": "Clínica especializada en terapia ocupacional infantil en Panamá. Ayudamos a tu hijo con regulación sensorial, motricidad y rutinas diarias.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad de Panamá",
+        "addressCountry": "PA"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Lic. Claudia Ortega",
+        "jobTitle": "Terapeuta Ocupacional"
+      },
+      "telephone": "+507-6391-2665",
+      "medicalSpecialty": "OccupationalTherapy"
+    }
+    </script>
+    <!-- ========================================= -->
+
     <link rel="icon" href="logotipo.png" type="image/png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
@@ -30,15 +75,8 @@
             --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth; 
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             background-color: var(--bg-white);
@@ -56,9 +94,6 @@
             letter-spacing: -0.5px;
         }
 
-        /* =========================================
-            ANIMACIONES DE ENTRADA 
-            ========================================= */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -69,9 +104,7 @@
             transform: translateY(0);
         }
 
-        /* =========================================
-            HEADER (BLANCO SÓLIDO PARA ELIMINAR EL CUADRO DEL LOGO)
-            ========================================= */
+        /* HEADER */
         header {
             padding: 10px 5%;
             display: flex;
@@ -81,26 +114,21 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            background: #FFFFFF; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             border-bottom: 1px solid rgba(223, 134, 50, 0.15); 
             height: 125px; 
             transition: all 0.3s ease;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            text-decoration: none;
-        }
-
+        .logo-container { display: flex; align-items: center; height: 100%; text-decoration: none; }
         .logo-image {
             height: 105px; 
             max-width: 400px;
             width: auto;
             object-fit: contain;
-            mix-blend-mode: multiply; 
             transform: scale(1.1); 
             transform-origin: left center;
         }
@@ -126,9 +154,7 @@
             transform: translateY(-2px);
         }
 
-        /* =========================================
-            SECCIÓN 1: HERO 
-            ========================================= */
+        /* HERO */
         .hero {
             min-height: 90vh;
             display: flex;
@@ -148,12 +174,8 @@
             width: 100%;
         }
 
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
+        .hero-content { flex: 1; max-width: 600px; }
 
-        /* ETIQUETA PREMIUM (KICKER) REDISEÑADA */
         .hero-label {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -177,10 +199,7 @@
             color: var(--text-dark);
         }
 
-        .hero h1 span {
-            color: var(--brand-teal);
-            font-weight: 700;
-        }
+        .hero h1 span { color: var(--brand-teal); font-weight: 700; }
 
         .hero p {
             font-size: 1.12rem;
@@ -212,14 +231,7 @@
             background-color: #c7762a; 
         }
 
-        .hero-image-wrapper {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
-            z-index: 2;
-        }
-
+        .hero-image-wrapper { flex: 1; display: flex; justify-content: flex-end; position: relative; z-index: 2; }
         .hero-image-wrapper img {
             width: 100%;
             max-width: 550px;
@@ -230,9 +242,7 @@
             border: 1px solid rgba(223, 134, 50, 0.2); 
         }
 
-        /* =========================================
-            SECCIÓN 2: EMPATÍA
-            ========================================= */
+        /* EMPATÍA */
         .empathy {
             padding: 90px 5% 80px 5%; 
             text-align: center;
@@ -263,13 +273,8 @@
             line-height: 1.8;
         }
 
-        /* =========================================
-            SECCIÓN 3: SERVICIOS 
-            ========================================= */
-        .services {
-            padding: 100px 5% 90px 5%; 
-            background-color: var(--bg-light); 
-        }
+        /* SERVICIOS */
+        .services { padding: 100px 5% 90px 5%; background-color: var(--bg-light); }
 
         .section-title {
             font-size: 2.4rem;
@@ -282,34 +287,16 @@
         }
 
         .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--brand-orange);
-            border-radius: 5px;
+            content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
+            width: 60px; height: 3px; background-color: var(--brand-orange); border-radius: 5px;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px; 
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
 
         .service-card {
-            background-color: var(--bg-white); 
-            padding: 45px 35px; 
-            border-radius: 24px; 
-            border-top: 4px solid var(--brand-orange); 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
+            background-color: var(--bg-white); padding: 45px 35px; border-radius: 24px; 
+            border-top: 4px solid var(--brand-orange); box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: var(--transition); display: flex; flex-direction: column;
         }
 
         .service-card:hover {
@@ -318,397 +305,100 @@
             border-top-color: var(--brand-teal); 
         }
 
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--brand-teal-dark);
-            line-height: 1.3;
-        }
+        .service-card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--brand-teal-dark); line-height: 1.3; }
+        .service-card p { color: var(--text-medium); font-size: 1rem; line-height: 1.7; }
 
-        .service-card p {
-            color: var(--text-medium);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* =========================================
-            SECCIÓN 4: SOBRE MÍ 
-            ========================================= */
-        .about {
-            padding: 100px 5%;
-            background-color: var(--bg-white);
-        }
-
-        .about-container {
-            display: flex;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 60px;
-        }
-
-        .about-text { 
-            flex: 1.2; 
-        }
+        /* SOBRE MÍ */
+        .about { padding: 100px 5%; background-color: var(--bg-white); }
+        .about-container { display: flex; align-items: center; max-width: 1200px; margin: 0 auto; gap: 60px; }
+        .about-text { flex: 1.2; }
         .about-text h2 { font-size: 2.4rem; margin-bottom: 25px; }
         .about-text p { margin-bottom: 20px; color: var(--text-medium); font-size: 1.1rem; line-height: 1.8; }
         .about-text strong { color: var(--brand-orange); font-weight: 700; }
 
         .about-image {
-            flex: 0.8;
-            max-width: 400px; 
-            height: 520px; 
-            border-radius: 120px 20px 20px 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-            margin: 0 auto; 
+            flex: 0.8; max-width: 400px; height: 520px; border-radius: 120px 20px 20px 20px;
+            overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.08); margin: 0 auto; 
             border: 1px solid rgba(223, 134, 50, 0.15);
         }
-        .about-image img { 
-            width: 100%; 
-            height: 100%; 
-            display: block; 
-            object-fit: cover; 
-            object-position: top center; 
-        }
+        .about-image img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top center; }
 
-        /* =========================================
-            SECCIÓN 5: TESTIMONIOS 
-            ========================================= */
+        /* TESTIMONIOS */
         .testimonials {
-            padding: 90px 5%;
-            text-align: center;
-            background-color: var(--bg-light); 
-            position: relative;
-            overflow: hidden;
-            border-top: 1px solid rgba(0,0,0,0.02);
-            border-bottom: 1px solid rgba(0,0,0,0.02);
+            padding: 90px 5%; text-align: center; background-color: var(--bg-light); 
+            position: relative; overflow: hidden; border-top: 1px solid rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.02);
         }
-        
-        .testimonial-block { 
-            max-width: 800px; 
-            margin: 0 auto; 
-            position: relative;
-            z-index: 1;
-        }
-        .testimonial-block p.quote { 
-            font-size: 1.6rem; 
-            font-style: italic; 
-            margin-bottom: 25px; 
-            line-height: 1.6; 
-            color: var(--brand-teal-dark);
-            font-family: 'Nunito', sans-serif; 
-        }
-        .testimonial-block p.author { 
-            font-size: 0.95rem; 
-            font-weight: 700; 
-            color: var(--brand-orange);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+        .testimonial-block { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+        .testimonial-block p.quote { font-size: 1.6rem; font-style: italic; margin-bottom: 25px; line-height: 1.6; color: var(--brand-teal-dark); font-family: 'Nunito', sans-serif; }
+        .testimonial-block p.author { font-size: 0.95rem; font-weight: 700; color: var(--brand-orange); text-transform: uppercase; letter-spacing: 2px; }
 
-        /* =========================================
-            SECCIÓN 6: EL PROCESO 
-            ========================================= */
-        .process { 
-            padding: 100px 5%; 
-            background-color: var(--bg-white); 
-        }
-        
-        .process-container {
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
-        
-        .process-steps { 
-            display: flex; 
-            justify-content: space-between; 
-            gap: 30px; 
-            margin-top: 60px; 
-        }
-        
-        .step { 
-            flex: 1; 
-            padding: 40px 30px; 
-            background-color: var(--bg-light); 
-            border-radius: 24px; 
-            text-align: center;
-            transition: var(--transition);
-            border-top: 4px solid transparent;
-        }
-
-        .step:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.06);
-            border-top-color: var(--brand-orange);
-            background-color: var(--bg-white);
-        }
-
-        .step-number { 
-            font-family: 'Quicksand', sans-serif; 
-            font-weight: 700; 
-            font-style: italic; 
-            font-size: 3.5rem; 
-            color: var(--brand-orange); 
-            margin-bottom: 10px; 
-            display: block; 
-            opacity: 0.9;
-        }
+        /* PROCESO */
+        .process { padding: 100px 5%; background-color: var(--bg-white); }
+        .process-container { max-width: 1200px; margin: 0 auto; }
+        .process-steps { display: flex; justify-content: space-between; gap: 30px; margin-top: 60px; }
+        .step { flex: 1; padding: 40px 30px; background-color: var(--bg-light); border-radius: 24px; text-align: center; transition: var(--transition); border-top: 4px solid transparent; }
+        .step:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(223, 134, 50, 0.06); border-top-color: var(--brand-orange); background-color: var(--bg-white); }
+        .step-number { font-family: 'Quicksand', sans-serif; font-weight: 700; font-style: italic; font-size: 3.5rem; color: var(--brand-orange); margin-bottom: 10px; display: block; opacity: 0.9; }
         .step h3 { margin-bottom: 15px; font-size: 1.3rem; color: var(--brand-teal-dark); }
         .step p { color: var(--text-medium); font-size: 1rem; line-height: 1.6; }
 
-        /* =========================================
-            SECCIÓN 7: LLAMADO A LA ACCIÓN FINAL
-            ========================================= */
-        .final-cta {
-            padding: 100px 5%;
-            text-align: center;
-            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
-            color: #FFF;
-        }
-        
-        .final-cta h2 {
-            color: #FFF;
-            font-size: 2.6rem;
-            margin-bottom: 15px;
-        }
-        
-        .final-cta p {
-            font-size: 1.15rem;
-            margin-bottom: 40px;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
+        /* CTA FINAL */
+        .final-cta { padding: 100px 5%; text-align: center; background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%); color: #FFF; }
+        .final-cta h2 { color: #FFF; font-size: 2.6rem; margin-bottom: 15px; }
+        .final-cta p { font-size: 1.15rem; margin-bottom: 40px; font-weight: 400; color: rgba(255, 255, 255, 0.9); }
         .btn-secondary {
-            display: inline-block;
-            background-color: var(--brand-orange); 
-            color: #FFF;
-            padding: 18px 45px; 
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 30px;
-            transition: var(--transition);
-            box-shadow: 0 10px 25px rgba(223, 134, 50, 0.35); 
-            font-family: 'Quicksand', sans-serif;
+            display: inline-block; background-color: var(--brand-orange); color: #FFF; padding: 18px 45px; 
+            text-decoration: none; font-size: 1.1rem; font-weight: 700; border-radius: 30px; transition: var(--transition);
+            box-shadow: 0 10px 25px rgba(223, 134, 50, 0.35); font-family: 'Quicksand', sans-serif;
         }
+        .btn-secondary:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 15px 35px rgba(223, 134, 50, 0.45); background-color: #c7762a; color: #FFF; }
 
-        .btn-secondary:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(223, 134, 50, 0.45);
-            background-color: #c7762a;
-            color: #FFF;
-        }
-
-        /* =========================================
-            FOOTER 
-            ========================================= */
-        footer {
-            background-color: var(--footer-bg); 
-            color: #A0AEC0; 
-            padding: 60px 5% 30px 5%;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .footer-logo-img {
-            height: 80px; 
-            max-width: 280px;
-            width: auto;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-            opacity: 0.95;
-            transition: var(--transition);
-        }
-
-        .footer-logo-img:hover {
-            opacity: 1;
-            transform: scale(1.03);
-        }
-
-        .footer-links a {
-            color: #A0AEC0;
-            text-decoration: none;
-            margin-left: 30px;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            font-weight: 600;
-            font-family: 'Quicksand', sans-serif; 
-        }
+        /* FOOTER */
+        footer { background-color: var(--footer-bg); color: #A0AEC0; padding: 60px 5% 30px 5%; }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 30px; margin-bottom: 30px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        .footer-logo-img { height: 80px; max-width: 280px; width: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.95; transition: var(--transition); }
+        .footer-logo-img:hover { opacity: 1; transform: scale(1.03); }
+        .footer-links a { color: #A0AEC0; text-decoration: none; margin-left: 30px; font-size: 0.95rem; transition: var(--transition); font-weight: 600; font-family: 'Quicksand', sans-serif; }
         .footer-links a:hover { color: var(--brand-orange); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .footer-bottom p { font-size: 0.85rem; font-weight: 300; }
+        .footer-social-icons { display: flex; gap: 15px; }
+        .footer-social-icons a { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255,255,255,0.05); transition: var(--transition); }
+        .footer-social-icons svg { width: 20px; height: 20px; fill: #A0AEC0; transition: var(--transition); }
+        .footer-social-icons a:hover { background-color: var(--brand-orange); transform: translateY(-2px); }
+        .footer-social-icons a:hover svg { fill: #FFF; }
 
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-bottom p {
-            font-size: 0.85rem;
-            font-weight: 300;
-        }
-
-        .footer-social-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .footer-social-icons a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255,255,255,0.05);
-            transition: var(--transition);
-        }
-
-        .footer-social-icons svg {
-            width: 20px;
-            height: 20px;
-            fill: #A0AEC0;
-            transition: var(--transition);
-        }
-
-        .footer-social-icons a:hover {
-            background-color: var(--brand-orange);
-            transform: translateY(-2px);
-        }
-        .footer-social-icons a:hover svg {
-            fill: #FFF;
-        }
-
-        /* =========================================
-            BOTÓN FLOTANTE WHATSAPP
-            ========================================= */
+        /* WHATSAPP */
         .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            transition: var(--transition);
-            z-index: 1000;
-            text-decoration: none;
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: var(--transition); z-index: 1000; text-decoration: none;
         }
+        .floating-whatsapp:hover { transform: scale(1.1) rotate(-5deg); box-shadow: 0 8px 25px rgba(0,0,0,0.25); }
+        .floating-whatsapp svg { width: 35px; height: 35px; fill: white; }
 
-        .floating-whatsapp:hover {
-            transform: scale(1.1) rotate(-5deg);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        }
-
-        .floating-whatsapp svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        /* =========================================
-            RESPONSIVE DESIGN (MÓVILES OPTIMIZADO AL 100%)
-            ========================================= */
+        /* RESPONSIVE MÓVIL */
         @media (max-width: 992px) {
-            header { 
-                height: 110px; 
-                padding: 10px 4%;
-                border-bottom: 1px solid rgba(223, 134, 50, 0.2); 
-            }
-            .logo-image { 
-                height: 80px; 
-                max-width: 250px;
-                transform: none; 
-            } 
+            header { height: 110px; padding: 10px 4%; border-bottom: 1px solid rgba(223, 134, 50, 0.2); }
+            .logo-image { height: 80px; max-width: 250px; transform: none; } 
             .header-btn { padding: 8px 16px; font-size: 0.85rem; }
-
-            .hero { 
-                padding-top: 150px; 
-                padding-bottom: 60px;
-                min-height: auto; 
-            }
-            .hero-container { 
-                flex-direction: column; 
-                text-align: center; 
-                gap: 35px; 
-            }
-            
-            .hero h1 { 
-                font-size: 2.1rem; 
-                line-height: 1.3; 
-                margin-bottom: 15px;
-            }
-            
-            .hero p {
-                font-size: 1.05rem; 
-                line-height: 1.6;
-                margin-bottom: 30px; 
-                padding: 0 10px;
-            }
-
-            .btn-primary {
-                margin-bottom: 25px; 
-                padding: 16px 32px; 
-                width: 90%; 
-            }
-
-            .section-title {
-                font-size: 1.9rem;
-                margin-bottom: 40px;
-            }
-
-            .empathy h2 {
-                font-size: 1.7rem;
-            }
-
-            .about-text h2 {
-                font-size: 1.9rem;
-            }
-
-            .final-cta h2 {
-                font-size: 1.8rem;
-            }
-
+            .hero { padding-top: 140px; padding-bottom: 60px; min-height: auto; }
+            .hero-container { flex-direction: column; text-align: center; gap: 30px; }
+            .hero h1 { font-size: 2.1rem; line-height: 1.3; margin-bottom: 15px; }
+            .hero p { font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px; padding: 0 10px; }
+            .btn-primary { margin-bottom: 25px; padding: 16px 32px; width: 90%; }
+            .section-title { font-size: 1.9rem; margin-bottom: 40px; }
+            .empathy h2 { font-size: 1.7rem; }
+            .about-text h2 { font-size: 1.9rem; }
+            .final-cta h2 { font-size: 1.8rem; }
             .hero-image-wrapper { justify-content: center; margin-top: 15px; }
             .hero-image-wrapper img { border-radius: 20px; max-width: 95%; }
-            
-            .empathy { 
-                border-top-left-radius: 40px; 
-                border-top-right-radius: 40px; 
-                margin-top: -35px; 
-                padding: 70px 5%;
-            }
-            
+            .empathy { border-top-left-radius: 40px; border-top-right-radius: 40px; margin-top: -35px; padding: 70px 5%; }
             .about-container { flex-direction: column; text-align: center; gap: 40px; }
             .about-image { height: 420px; width: 100%; max-width: 320px; }
-            
             .process-steps { flex-direction: column; gap: 20px; }
-            
-            .footer-content, .footer-bottom { 
-                flex-direction: column; 
-                gap: 25px; 
-                text-align: center; 
-            }
+            .footer-content, .footer-bottom { flex-direction: column; gap: 25px; text-align: center; }
             .footer-links a { margin: 10px 15px; display: inline-block; }
             .footer-logo-img { height: 65px; } 
-            
             .floating-whatsapp { bottom: 20px; right: 20px; width: 50px; height: 50px; }
             .floating-whatsapp svg { width: 28px; height: 28px; }
         }
@@ -718,7 +408,8 @@
 
     <header>
         <a href="#inicio" class="logo-container">
-            <img src="logo1.png" alt="Sin Límites TO" class="logo-image">
+            <!-- Alt tag optimizado SEO Local -->
+            <img src="logopng.png" alt="Terapia Ocupacional Infantil en Panamá - Sin Límites TO" class="logo-image">
         </a>
         <a href="https://wa.me/50763912665" target="_blank" class="header-btn">Agendar Cita</a>
     </header>
@@ -726,24 +417,23 @@
     <section class="hero" id="inicio">
         <div class="hero-container">
             <div class="hero-content fade-in">
-                <!-- ETIQUETA KICKER REDISEÑADA -->
-                <span class="hero-label">Terapia Ocupacional Infantil</span>
+                <!-- Kicker con keyword principal (SEO Visible) -->
+                <span class="hero-label">Terapia Ocupacional Infantil en Panamá</span>
                 
-                <!-- TITULAR INCLUSIVO Y MAGNÉTICO -->
                 <h1>Ayudamos a tus pequeños a superar los retos diarios con <span>confianza e independencia</span></h1>
                 
-                <!-- SUBTÍTULO MEJORADO (EL CÓMO) -->
-                <p>Acompañamos su ritmo único con estrategias prácticas. Trabajamos contigo para reducir la frustración en casa, potenciar sus habilidades y devolverles la seguridad en cada paso.</p>
+                <!-- Subtítulo natural pero que ataca keywords ("terapeutas para mi hijo", etc. de forma sutil) -->
+                <p>Acompañamos su ritmo único con las mejores estrategias prácticas. Si buscas terapeutas para tu hijo, trabajamos contigo para reducir la frustración en casa, potenciar sus habilidades y devolverles la seguridad en cada paso.</p>
                 
                 <a href="https://wa.me/50763912665" target="_blank" class="btn-primary">Solicitar una Evaluación Inicial</a>
             </div>
             <div class="hero-image-wrapper fade-in">
-                <img src="img01.jpg" alt="Terapia Ocupacional Infantil en Panamá">
+                <!-- Alt optimizado -->
+                <img src="img01.jpg" alt="Terapia Ocupacional Infantil Panamá - Intervención temprana">
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE EMPATÍA CON COPY CORREGIDO Y MÁS NATURAL -->
     <section class="empathy fade-in">
         <h2>Sabemos que verlos frustrarse con tareas cotidianas es agotador para toda la familia.</h2>
         <p>No tienes que descifrar estos retos a solas. Nuestro objetivo va más allá del consultorio: te brindamos herramientas prácticas, probadas y sencillas para que la paz, el equilibrio y las sonrisas regresen a tu hogar.</p>
@@ -754,7 +444,6 @@
         <div class="services-grid">
             <div class="service-card fade-in">
                 <h3>Regulación Sensorial</h3>
-                <!-- Aquí también reemplazamos 'tu hijo' por 'los pequeños' o 'tus pequeños' -->
                 <p>Ayudamos a tus pequeños a procesar mejor los estímulos de su entorno. Nuestro enfoque reduce la sobrecarga y las crisis emocionales, facilitando que disfruten su día a día en casa y en la escuela con mayor calma.</p>
             </div>
             <div class="service-card fade-in">
@@ -772,11 +461,13 @@
         <div class="about-container">
             <div class="about-text fade-in">
                 <h2>Experiencia, Dedicación y Calidez Humana</h2>
-                <p>Soy la <strong>Lic. Claudia Ortega</strong>, y mi pasión es ver a los niños superar sus límites. Con años de experiencia en terapia ocupacional infantil, he aprendido que cada niño es único y requiere un plan trazado exclusivamente a su medida.</p>
+                <!-- Integración sutil de keyword de autoridad -->
+                <p>Soy la <strong>Lic. Claudia Ortega</strong>, especialista en terapia ocupacional en Panamá, y mi pasión es ver a los niños superar sus límites. Con años de experiencia clínica, he aprendido que cada niño es único y requiere un plan trazado exclusivamente a su medida.</p>
                 <p><strong>Mi compromiso es trabajar en equipo contigo.</strong> Entiendo la dinámica familiar y diseño terapias que sean efectivas para los pequeños y manejables para tu rutina diaria. Juntos, celebraremos cada pequeño gran avance.</p>
             </div>
             <div class="about-image fade-in">
-                <img src="img02.jpg" alt="Lic. Claudia Ortega - Terapia Ocupacional">
+                <!-- Alt optimizado -->
+                <img src="img02.jpg" alt="Lic. Claudia Ortega - Mejores terapeutas ocupacionales de Panamá">
             </div>
         </div>
     </section>
@@ -820,7 +511,8 @@
     <footer>
         <div class="footer-content">
             <a href="#inicio" class="footer-logo-link">
-                <img src="logopng.png" alt="Sin Límites TO" class="footer-logo-img">
+                <!-- Alt optimizado -->
+                <img src="logopng.png" alt="Sin Límites TO - Clínica de Terapia Ocupacional en Panamá" class="footer-logo-img">
             </a>
             <div class="footer-links">
                 <a href="#servicios">Servicios</a>
@@ -829,7 +521,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Lic. Claudia Ortega. Terapia Ocupacional. Todos los derechos reservados.</p>
+            <!-- Keyword local sutil en footer -->
+            <p>&copy; 2026 Lic. Claudia Ortega. Los mejores servicios de Terapia Ocupacional Infantil en Panamá. Todos los derechos reservados.</p>
             
             <div class="footer-social-icons">
                 <a href="https://instagram.com/sinlimites_to" target="_blank" aria-label="Instagram">
